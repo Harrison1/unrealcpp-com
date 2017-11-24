@@ -21,8 +21,8 @@ collections:
       - {label: "Featured Image", name: "featuredImage", widget: "string", required: false}
       - {label: "Card Image", name: "image", widget: "image", required: false}
       - {label: "Featured Video", name: "featuredVideo", widget: "string", required: false}
-      - {label: "Tags", name: tags, widget: list, required: false}
-      - {label: "Unreal Version", name: uev, widget: string, required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Unreal Version", name: "uev", widget: "string", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
