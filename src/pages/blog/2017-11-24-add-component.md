@@ -8,8 +8,10 @@ authorTwitter: HarryMcGueeze
 featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511556843/pc-setup_qawyye.jpg
 featuredVideo: youtube.com
-uev: '4.18'
+uev: 4.18
 date: 2017-11-24T22:25:39.734Z
 description: this is my descr
+tags:
+  - coffee
 ---
 Hello Galaxy
