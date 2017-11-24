@@ -7,7 +7,7 @@ import '../css/screen.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Gatlify CMS" />
+    <Helmet title="Unreal C++" />
     <div>{children()}</div>
   </div>
 );

@@ -13,4 +13,4 @@ module.exports = {
     copyright: "Copyright © 2017. UnrealCPP.com", // Copyright string for the footer of the website and RSS feed.
     themeColor: "#663399", // Used for setting manifest and progress theme colors.
     backgroundColor: "#0086b3" // Used for setting manifest background color.
-  };
+  }

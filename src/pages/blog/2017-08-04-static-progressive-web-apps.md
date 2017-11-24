@@ -3,11 +3,13 @@ templateKey: blog-post
 path: /static-progressive-web-apps
 title: Static Progressive Web Apps
 featuredImage: https://res.cloudinary.com/dz09rnbhe/image/upload/v1511348527/big-daddy_ddfong.jpg
+featuredVideo: https://www.youtube.com/watch?v=elSN-l2lhH0
 image: https://res.cloudinary.com/dz09rnbhe/image/upload/v1511348527/big-daddy_ddfong.jpg
 date: 2017-08-08T17:12:33.962Z
 description: Gatsby.js is a static PWA (Progressive Web App) generator. You get code and data splitting out-of-the-box.
 authorImage: https://avatars1.githubusercontent.com/u/5263612?s=460&v=4
 author: Harrison McGuire
+authorTwitter: HarryMcGueeze
 tags:
   - article
   - world
