@@ -13,14 +13,14 @@ const HomeNav = ( { isHome } ) =>
                     </Link>
                 </li>
                 <li role="menuitem">
-                    <Link to="/about">
-                        About
-                    </Link>
-                </li>
-                <li role="menuitem">
                     <Link to="/tags">
                         Tags
                     </Link>
+                </li>
+                <li role="menuitem">
+                    <a href="/">
+                        Patreon
+                    </a>
                 </li>
             </ul>
         </div>
@@ -28,7 +28,7 @@ const HomeNav = ( { isHome } ) =>
             <a className="social-logo" href="https://www.youtube.com/c/HarrisonMcGuire" >
                 <img src={ youtubeLogo } alt="youtube logo" />
             </a>
-            <a className="social-logo" href="https://github.com/Harrison1/netlify-gatsby-blog" >
+            <a className="social-logo" href="https://github.com/Harrison1/unrealcpp" >
                 <img src={ githubLogo } alt="github logo" />
             </a>
         </div>

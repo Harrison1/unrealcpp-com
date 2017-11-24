@@ -10,7 +10,7 @@ module.exports = {
     siteFBAppID: "1825356251115265", // FB Application ID for using app insights
     googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
     userName: "Harrison McGuire", // Username to display in the author segment.
-    copyright: "Copyright © 2017. Gatsby Netlify CMS Starter", // Copyright string for the footer of the website and RSS feed.
+    copyright: "Copyright © 2017. UnrealCPP.com", // Copyright string for the footer of the website and RSS feed.
     themeColor: "#663399", // Used for setting manifest and progress theme colors.
     backgroundColor: "#0086b3" // Used for setting manifest background color.
   };

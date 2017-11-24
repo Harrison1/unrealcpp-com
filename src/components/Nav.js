@@ -6,7 +6,7 @@ import youtubeLogo from '../img/youtube-logo.svg'
 const Nav = ( { isHome } ) => 
     <nav className="site-nav">
         <div className="site-nav-left">
-            <a className="site-nav-logo" href="/">Gatlify</a>
+            <a className="site-nav-logo" href="/">U++</a>
             <ul className="nav" role="menu">
                 <li role="menuitem">
                     <Link to="/">
@@ -14,14 +14,14 @@ const Nav = ( { isHome } ) =>
                     </Link>
                 </li>
                 <li role="menuitem">
-                    <Link to="/about">
-                        About
-                    </Link>
-                </li>
-                <li role="menuitem">
                     <Link to="/tags">
                         Tags
                     </Link>
+                </li>
+                <li role="menuitem">
+                    <a href="/">
+                        Patreon
+                    </a>
                 </li>
             </ul>
         </div>
@@ -29,7 +29,7 @@ const Nav = ( { isHome } ) =>
             <a className="social-logo" href="https://www.youtube.com/c/HarrisonMcGuire" >
                 <img src={ youtubeLogo } alt="youtube logo" />
             </a>
-            <a className="social-logo" href="https://github.com/Harrison1/netlify-gatsby-blog" >
+            <a className="social-logo" href="https://github.com/Harrison1/unrealcpp" >
                 <img src={ githubLogo } alt="github logo" />
             </a>
         </div>
