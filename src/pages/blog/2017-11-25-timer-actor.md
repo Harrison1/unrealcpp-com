@@ -15,6 +15,8 @@ uev: 4.18.1
 date: 2017-11-25T13:22:13.628Z
 description: How to set a log message to print to screen every 2 seconds
 ---
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/TimerActor](https://github.com/Harrison1/unrealcpp/tree/master/TimerActor)**
+
 We'll create a new actor called `TimerActor`. 
 
 In the header file we will add a function to repeat every 2 seconds a `FTimerHandle` class to manage the function in the world's time.

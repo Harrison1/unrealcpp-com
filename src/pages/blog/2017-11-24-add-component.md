@@ -10,8 +10,113 @@ featuredImage: >-
 featuredVideo: youtube.com
 tags:
   - beginner
-uev: '4.18'
-date: 2017-11-24T23:38:29.074Z
-description: Galaxy Description
+  - component
+  - billboard
+uev: 4.18.1
+date: 2017-11-24T23:28:08.852Z
+description: >-
+  Logging out commands is helpful to debug a game. UE4 offers a variety of ways
+  to log out messages. Let's go through a few types of ways of logging out
+  commands.
 ---
-Hello Galaxy
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/AddBillboardComp](https://github.com/Harrison1/unrealcpp/tree/master/AddBillboardComp)**
+
+In this tutorial we are going to add a `Billboard Component` to our actor. Adding components can also be easly added in the UE4 editor, but let's go ahead and do it programatically.
+
+First we'll create a new actor named `AddBillboardComp`. Remember, if you call your actor something different, be sure to change the name everywhere in the header and cpp file.
+
+In the header file we will create one variable that inherents from the `UBillboardComponent` class. This will allow us to add a billboard component and use it's attributes.
+
+### AddBillboardComp.h
+```cpp
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "AddBillboardComp.generated.h"
+
+UCLASS()
+class UNREALCPP_API AAddBillboardComp : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	AAddBillboardComp();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	// declare point light comp
+	UPROPERTY(VisibleAnywhere)
+	class UBillboardComponent* MyBillboardComp;
+	
+};
+```
+
+In the `.cpp` file we are going to add the `Billboard Component` to our actor. This process is very similar to adding any component to an actor. 
+
+If you want to use any component class with you actor, you have to to include the component header file in the `.cpp` file. So, let's add the `Billboard Component` file to our code. Add all necessary scripts under the named components header include call.
+
+#### Add BillboardComponent.h
+```cpp
+#include "Components/BillboardComponent.h"
+```
+
+For this tutorial we are going to add the component in the actor's init function. This will ensure the component is added to the actor whenever it is added to a scene.
+
+#### Create a default sub object of the billboard component
+```cpp
+MyBillboardComp = CreateDefaultSubobject<UBillboardComponent>(TEXT("Root Billboard Comp"));
+```
+
+#### For this tutorial let's make it so we can see the billboard sprite in game
+```cpp
+MyBillboardComp->SetHiddenInGame(false, true);
+```
+
+#### Make the billboard component the root component
+```cpp
+RootComponent = MyBillboardComp;
+```
+
+Below is the final `.cpp` file.
+
+### AddBillboardComp.h
+```cpp
+#include "AddBillboardComp.h"
+// include billboard comp
+#include "Components/BillboardComponent.h"
+
+
+// Sets default values
+AAddBillboardComp::AAddBillboardComp()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	MyBillboardComp = CreateDefaultSubobject<UBillboardComponent>(TEXT("Root Billboard Comp"));
+	MyBillboardComp->SetHiddenInGame(false, true);
+	RootComponent = MyBillboardComp;
+
+}
+
+// Called when the game starts or when spawned
+void AAddBillboardComp::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
+
+// Called every frame
+void AAddBillboardComp::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+```
