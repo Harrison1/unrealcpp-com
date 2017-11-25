@@ -10,13 +10,19 @@ featuredImage: >-
 featuredVideo: youtube.com
 tags:
   - beginner
+  - log
 uev: 4.18.1
 date: 2017-11-24T23:28:08.852Z
-description: Debug Log
+description: >-
+  Logging out commands is helpful to debug a game. UE4 offers a variety of ways
+  to log out messages. Let's go through a few types of ways of logging out
+  commands.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog](https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog)**
 
-Create a new actor called ConsoleLog
+Create a new actor called ConsoleLog.
+
+We don't have to do anything in the header file, but below is the default code that should appear when you create a new actor. I called my actor `ConsoleLog`, if you choose a different name be sure to change it where necessary.
 
 ### ConsoleLog.h
 
@@ -48,6 +54,25 @@ public:
 };
 
 ```
+
+The .cpp file is where we will log out our messages. For this example we will be logging out the messages in the `BeginPlay` message. So, when the game is started the messages will print out. Below are three ways of how to log messages. 
+
+#### Log to console
+```cpp
+UE_LOG(LogTemp, Warning, TEXT("I just started running"));
+```
+
+#### Print to Screen
+```cpp
+GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Screen Message"));
+```
+
+#### Print Vector
+```cpp
+GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("My Location is: %s"), *GetActorLocation().ToString()));
+```
+
+Below is the full .cpp file. The top two `define` calls are shortcuts to make logging messages easier. 
 
 ### ConsoleLog.cpp
 ```cpp
