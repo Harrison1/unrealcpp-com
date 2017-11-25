@@ -14,6 +14,8 @@ uev: 4.18.1
 date: 2017-11-25T01:57:04.893Z
 description: You have to do three things to completely hide an actor in game
 ---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lIY6zFL95hE" frameborder="0" allowfullscreen></iframe>
+
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/HideActor](https://github.com/Harrison1/unrealcpp/tree/master/HideActor)**
 
 To completely hide an actor in game you have to do three things. You have to disable it's collision, disable it from ticking, and hide it in game.
