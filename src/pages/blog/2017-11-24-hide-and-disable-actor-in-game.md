@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /hide-and-disable-actor
 title: Hide and Disable Actor in Game
 author: Harrison McGuire
-authorImage: my.png
+authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511555757/landscape_d6swvp.jpg
