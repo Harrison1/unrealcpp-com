@@ -20,7 +20,7 @@ const IndexPage = ({ data, pathContext }) => {
             <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
 
-        <Header image='http://res.cloudinary.com/several-levels/image/upload/v1511624402/night-road_meosxl.jpg' title="Unreal 4 C++" tagline="C++ Tutorials for Unreal Engine 4" />
+        <Header image='https://res.cloudinary.com/several-levels/image/upload/v1511624402/night-road_meosxl.jpg' title="Unreal 4 C++" tagline="C++ Tutorials for Unreal Engine 4" />
       
         <main id="site-main" className="site-main outer" role="main">
 
