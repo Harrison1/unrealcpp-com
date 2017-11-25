@@ -2,7 +2,7 @@ const config = require("./data/SiteConfig");
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: config.siteTitle,
     siteUrl: config.siteUrl,
     rssMetadata: {
       site_url: config.siteUrl ,

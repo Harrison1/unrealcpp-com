@@ -17,7 +17,7 @@ const Template = ({ data }) => {
 
       <Navbar />
 
-      <Helmet title={`Blog | ${post.frontmatter.title}`} />
+      <Helmet title={`Unreal C++ | ${post.frontmatter.title}`} />
 
       <div className="blog-post-header" style={{ backgroundImage: `url(${ post.frontmatter.featuredImage })` }}>
 
