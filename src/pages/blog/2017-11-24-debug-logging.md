@@ -14,7 +14,7 @@ uev: 4.18.1
 date: 2017-11-24T23:28:08.852Z
 description: Debug Log
 ---
-** Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog](https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog) **
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog](https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog)**
 
 Create a new actor called ConsoleLog
 
