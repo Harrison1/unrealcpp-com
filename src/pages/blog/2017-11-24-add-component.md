@@ -13,11 +13,9 @@ tags:
   - component
   - billboard
 uev: 4.18.1
-date: 2017-11-24T23:28:08.852Z
+date: 2017-11-24T23:30:08.852Z
 description: >-
-  Logging out commands is helpful to debug a game. UE4 offers a variety of ways
-  to log out messages. Let's go through a few types of ways of logging out
-  commands.
+  In this tutorial we are going to programatically add a Billboard Component to our actor.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/AddBillboardComp](https://github.com/Harrison1/unrealcpp/tree/master/AddBillboardComp)**
 
