@@ -7,7 +7,7 @@ const Footer = () =>
     <footer className="site-footer outer">
         <div className="site-footer-content inner">
             <section className="copyright">
-                <Link to="/">UnrealCPP.com</Link> &copy; { (new Date()).getFullYear() }
+                <Link to="/">UnrealCPP.com</Link> | Unreal Engine 4 C++ tutorials
             </section>
             <nav>
                 <a className="social-logo" href="https://www.youtube.com/c/HarrisonMcGuire" >

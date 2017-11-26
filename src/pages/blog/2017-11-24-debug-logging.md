@@ -6,7 +6,7 @@ author: Harrison McGuire
 authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/v1511556843/pc-setup_qawyye.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1511648024/console-log_gcudmg.jpg
 featuredVideo: youtube.com
 tags:
   - beginner

@@ -6,7 +6,7 @@ author: Harrison McGuire
 authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/q_80/v1511556058/landscape-purple_bcgzbg.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1511648024/timer_tqztij.jpg
 featuredVideo: youtube.com
 tags:
   - beginner
