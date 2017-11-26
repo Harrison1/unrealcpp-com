@@ -18,6 +18,8 @@ description: You have to do three things to completely hide an actor in game
 
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/HideActor](https://github.com/Harrison1/unrealcpp/tree/master/HideActor)**
 
+*For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
+
 To completely hide an actor in game you have to do three things. You have to disable it's collision, disable it from ticking, and hide it in game.
 
 You can add the code to any actor. For this example I created a separate actor demonstrate its purpose.

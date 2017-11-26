@@ -19,6 +19,8 @@ description: >-
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/AddBillboardComp](https://github.com/Harrison1/unrealcpp/tree/master/AddBillboardComp)**
 
+*For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
+
 In this tutorial we are going to add a `Billboard Component` to our actor. Adding components can also be easly added in the UE4 editor, but let's go ahead and do it programatically.
 
 First we'll create a new actor named `AddBillboardComp`. Remember, if you call your actor something different, be sure to change the name everywhere in the header and cpp file.

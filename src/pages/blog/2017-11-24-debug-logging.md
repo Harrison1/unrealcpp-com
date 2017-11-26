@@ -20,6 +20,8 @@ description: >-
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog](https://github.com/Harrison1/unrealcpp/tree/master/ConsoleLog)**
 
+*For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
+
 Create a new actor called ConsoleLog.
 
 We don't have to do anything in the header file, but below is the default code that should appear when you create a new actor. I called my actor `ConsoleLog`, if you choose a different name be sure to change it where necessary.

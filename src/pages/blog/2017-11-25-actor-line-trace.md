@@ -18,7 +18,9 @@ description: How to draw a line trace from an actor
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/blob/master/ActorLineTrace/ActorLineTrace.h](https://github.com/Harrison1/unrealcpp/blob/master/ActorLineTrace/ActorLineTrace.h)**
 
-For this tutorial we are the using the Starter Content provided by Unreal. Create a new actor, for this example we will call our actor `ActorLineTrace`.
+*For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
+
+Create a new actor, for this example we will call our actor `ActorLineTrace`.
 
 We don't have to do anything in the header file. Just in case, below is the header file was created by default.
 
