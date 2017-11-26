@@ -122,3 +122,5 @@ void AConsoleLog::Tick(float DeltaTime)
 }
 
 ```
+
+View the offical Logging documentation [here](https://wiki.unrealengine.com/Logs,_Printing_Messages_To_Yourself_During_Runtime).
