@@ -9,7 +9,7 @@ featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511657693/add-radial-force_du3sgy.jpg
 featuredVideo: youtube.com
 tags:
-  - beginner
+  - intermediate
   - force
   - radial
 uev: 4.18.1

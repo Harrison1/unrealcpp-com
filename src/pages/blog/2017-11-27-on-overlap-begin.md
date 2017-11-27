@@ -1,74 +1,127 @@
 ---
 templateKey: blog-post
-path: /character-bind-button
-title: Bind Button to Character
+path: /on-overlap-begin
+title: Character Overlap Events
 author: Harrison McGuire
 authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1511785411/character-overlap_sgrnyf.jpg
 featuredVideo: youtube.com
 tags:
   - beginner
-  - bind button
+  - overlap
+  - capsule
 uev: 4.18.1
-date: 2017-11-26T15:35:13.628Z
-description: Quick tutorial on how to bind a button to your character
+date: 2017-11-27T06:47:13.628Z
+description: Add a capsule component to trigger overlap events for your character. 
 ---
-**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/CharacterBindButton](https://github.com/Harrison1/unrealcpp/tree/master/CharacterBindButton)**
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/CharacterOverlapEvents](https://github.com/Harrison1/unrealcpp/tree/master/CharacterOverlapEvents)**
 
 *For this tutorial we are using the standard first person C++ template with starter content.*
 
-In this tutorial let's add an `Action` button to our character. First we will want to add an input option called `Action` and bind it to a keyboard input or controller button. In this case we are going to bind the `Action` input to our keyboard's `E` key. Go to Edit > Project Settings. Then select the Input option. Click the plus sign next to `Action Mappings`. Call the new input `Action` and select `E` from the dropdown menu.
+In your Character.h file declare `OnOverlapBegin` and `OnOverlapEnd` methods in the public section. My header file in this tutorial is called `UnrealCPPCharacter.h`, your file might be called something different. You can learn more about `OnComponentBeginOverlap` [here](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Components/UPrimitiveComponent/OnComponentBeginOverlap/index.html) and `OnComponentEndOverlap` [here](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Components/UPrimitiveComponent/OnComponentEndOverlap/index.html).
 
-
-#### open Edit > Project Settings
-[![project settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg "Project Settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg)
-
-
-#### go to the Input options and a button press
-[![input settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg "Input Settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg)
-
-In our Character.h file add the `OnAction` method under the `OnFire` method. My header file in this tutorial is called `UnrealCPPCharacter.h`, your file might be called something different.
-
-#### add OnAction to header file
+#### add overlap functions to the header file
 ```cpp
-protected:
-	
-	/** Fires a projectile. */
-	void OnFire();
+public
+  ...
 
-	// on action 
-	void OnAction();
+  // declare overlap begin function
+	UFUNCTION()
+	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	// declare overlap end function
+	UFUNCTION()
+	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
 ```
 
-Next, in our Character.cpp file we ar going to find our `SetupPlayerInputComponent` function and connect our `Action` button with our `OnAction` function. We will make our `OnAction` function in a second. I connect the controller to the function by `BindAction` from the `PlayerInputComponent`. You can learn more about the BindAction function [here](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Components/UInputComponent/BindAction/). In this example I am calling the `OnAction` function every time the button is `Pressed`, you can find other EInputEvents [here](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Engine/EInputEvent/index.html).
+In this tutorial we are going to add a capsule component to our character that handles trigger events. This will be a seperate capsule from the character's root capsule because I was having trouble with the correct events firing when I used the root capsule. So the new capsule with be identical to the root capsule but only manage overlap events. I know it's confusing, my fault, if I can figure out how to refactor it later I will update the code base.
 
-#### add this method in the SetupPlayerInputComponent method
+#### add trigger capsule to header file
 ```cpp
-PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AUnrealCPPCharacter::OnAction);
-```
-
-Finally we'll add the `OnAction` function to the bottom of our script. This will be an extremely simple function that logs a message to the screen.
-
-```cpp
-void AUnrealCPPCharacter::OnAction() 
+class AUnrealCPPCharacter : public ACharacter
 {
-	if (GEngine) 
+  GENERATED_BODY()
+
+  ...
+
+	// create trigger capsule
+	UPROPERTY(VisibleAnywhere, Category = "Trigger Capsule")
+  class UCapsuleComponent* TriggerCapsule;
+```
+
+We are finished with the header file. Moving on the character `.cpp` file. My `.cpp` file in this tutorial is called `UnrealCPPCharacter.cpp`, your file might be called something different.
+
+If you are not already including the `Components/CapsuleComponent.h` include the file at the top.
+
+#### include capsule component
+```cpp
+#include "Components/CapsuleComponent.h"
+```
+
+In the charcter init function we will add the capsule component to the character and connect it to the overlap events. 
+
+To add a capsule to our character we first `CreateDefaultSubobject` of a `UCapsuleComponent` and name it whatever we want. I called it "Trigger Capsule". Next, we havt to initialize th size, I made the size the same as the initial capsule component that was declared earlier in the init function. We can also set the collision type for this component by using `SetCollisionProfileName`. We add the `Trigger` profile name to the capsule which gives the component similar overlap events to a trigger capsule. This can also easliy be set in the editor. Finally attach the `TriggerCapsule` to the `RootComponent`
+
+#### add trigger capsule to character
+```cpp
+AUnrealCPPCharacter::AUnrealCPPCharacter()
+{
+  ...
+  // declare trigger capsule
+	TriggerCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger Capsule"));
+	TriggerCapsule->InitCapsuleSize(55.f, 96.0f);;
+	TriggerCapsule->SetCollisionProfileName(TEXT("Trigger"));
+  TriggerCapsule->SetupAttachment(RootComponent);
+}
+```
+
+We connect our capsule to overlap events by calling `OnComponentBeginOverlap` and `OnComponentEndOverlap`. You can learn more about `OnComponentBeginOverlap` [here](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Components/UPrimitiveComponent/OnComponentBeginOverlap/index.html) and `OnComponentEndOverlap` [here](https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Components/UPrimitiveComponent/OnComponentEndOverlap/index.html).
+
+#### connect overlap events to capsule
+```cpp
+AUnrealCPPCharacter::AUnrealCPPCharacter()
+{
+  ...
+
+  // declare overlap events
+	TriggerCapsule->OnComponentBeginOverlap.AddDynamic(this, &AUnrealCPPCharacter::OnOverlapBegin); 
+	TriggerCapsule->OnComponentEndOverlap.AddDynamic(this, &AUnrealCPPCharacter::OnOverlapEnd); 
+
+}
+```
+
+Finally, we have to create the `OnOverlapBegin` and `OnOverlapEnd` functions. This will be a simple function that prints a message to screen when the character overlaps with overlap component.
+
+#### OnOverlapBegin and OnOverlapEnd functions
+```cpp
+...
+void AUnrealCPPCharacter::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (OtherActor && (OtherActor != this) && OtherComp) 
 	{
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("I'm Pressing Action"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
+	}
+} 
+
+void AUnrealCPPCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	if (OtherActor && (OtherActor != this) && OtherComp) 
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap End"));
 	}
 }
 ```
 
-Now, your character will log message to the screen whenever they push `E`.
+Below is the final code for the tutorial.
 
-### UnrealCPPCharacter.h
+###
 ```cpp
-#pragma once
-
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "LightSwitchPushButton/LightSwitchPushButton.h"
 #include "UnrealCPPCharacter.generated.h"
 
 class UInputComponent;
@@ -142,9 +195,6 @@ protected:
 	/** Fires a projectile. */
 	void OnFire();
 
-	// on action 
-	void OnAction();
-
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
@@ -174,7 +224,7 @@ protected:
 };
 ```
 
-### UnrealCPPCharacter.cpp
+###
 ```cpp
 #include "UnrealCPPCharacter.h"
 #include "UnrealCPPProjectile.h"
@@ -232,6 +282,19 @@ AUnrealCPPCharacter::AUnrealCPPCharacter()
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 0.0f, 10.0f);
 
+	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P, FP_Gun, and VR_Gun 
+	// are set in the derived blueprint asset named MyCharacter to avoid direct content references in C++.
+
+    // declare trigger capsule
+	TriggerCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger Capsule"));
+	TriggerCapsule->InitCapsuleSize(55.f, 96.0f);;
+	TriggerCapsule->SetCollisionProfileName(TEXT("Trigger"));
+	TriggerCapsule->SetupAttachment(RootComponent);
+
+    // declare overlap events
+	TriggerCapsule->OnComponentBeginOverlap.AddDynamic(this, &AUnrealCPPCharacter::OnOverlapBegin); 
+	TriggerCapsule->OnComponentEndOverlap.AddDynamic(this, &AUnrealCPPCharacter::OnOverlapEnd); 
+
 }
 
 void AUnrealCPPCharacter::BeginPlay()
@@ -260,9 +323,6 @@ void AUnrealCPPCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AUnrealCPPCharacter::OnFire);
-
-	// Bind action event
-	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AUnrealCPPCharacter::OnAction);
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AUnrealCPPCharacter::MoveForward);
@@ -346,13 +406,19 @@ void AUnrealCPPCharacter::LookUpAtRate(float Rate)
 	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
-void AUnrealCPPCharacter::OnAction() 
+void AUnrealCPPCharacter::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (GEngine) 
+	if (OtherActor && (OtherActor != this) && OtherComp) 
 	{
-		
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("I'm Pressing Action"));
-        
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
+	}
+} 
+
+void AUnrealCPPCharacter::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	if (OtherActor && (OtherActor != this) && OtherComp) 
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap End"));
 	}
 }
 ```

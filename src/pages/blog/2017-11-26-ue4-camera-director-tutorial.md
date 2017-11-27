@@ -9,7 +9,7 @@ featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511657693/camera-director_wpndap.jpg
 featuredVideo: youtube.com
 tags:
-  - beginner
+  - intermediate
   - ue4 tutorial
   - camera
 uev: 4.18.1

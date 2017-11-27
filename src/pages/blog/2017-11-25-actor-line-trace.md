@@ -9,14 +9,14 @@ featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511643423/actor-line-trace_gxvwmt.jpg
 featuredVideo: youtube.com
 tags:
-  - beginner
+  - intermediate
   - line trace
   - ray cast
 uev: 4.18.1
 date: 2017-11-25T14:57:13.628Z
 description: How to draw a line trace from an actor
 ---
-**Github Link: [https://github.com/Harrison1/unrealcpp/blob/master/ActorLineTrace/ActorLineTrace.h](https://github.com/Harrison1/unrealcpp/blob/master/ActorLineTrace/ActorLineTrace.h)**
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/ActorLineTrace](https://github.com/Harrison1/unrealcpp/tree/master/ActorLineTrace)**
 
 *For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
 
