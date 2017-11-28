@@ -6,7 +6,7 @@ author: Harrison McGuire
 authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/v1511657693/create-static-mesh_xyqeat.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1511657692/add-mesh-from-filejpg_bkcla5.jpg
 featuredVideo: youtube.com
 tags:
   - beginner
