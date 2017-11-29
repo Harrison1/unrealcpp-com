@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /colliding-pawn
 title: Colliding Pawn UE4 Tutorial
 author: Harrison McGuire
-authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
+authorImage: 'https://res.cloudinary.com/several-levels/image/upload/v1511952457/harrison-mcguire_c8hczw.jpg'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511657692/colliding-pawn_uu9gao.jpg

@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /light-switch-push-button
 title: Light Switch on Button Press
 author: Harrison McGuire
-authorImage: 'https://avatars1.githubusercontent.com/u/5263612?s=460&v=4'
+authorImage: 'https://res.cloudinary.com/several-levels/image/upload/v1511952457/harrison-mcguire_c8hczw.jpg'
 authorTwitter: HarryMcGueeze
 featuredImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511657693/light-switch-button_zn1ggd.jpg

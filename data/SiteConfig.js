@@ -1,7 +1,7 @@
 module.exports = {
     blogPostDir: "src/pages/blog", // The name of directory that contains your posts.
     siteTitle: "Unreal C++", // Site title.
-    siteTitleAlt: "C++ in Unreal Engine 4", // Alternative site title for SEO.
+    siteTitleAlt: "Unreal Engine 4 C++ Tutorials", // Alternative site title for SEO.
     siteLogo: "https://api.adorable.io/avatars/150/logo.png", // Logo used for SEO and manifest.
     siteUrl: "https://unrealcpp.com/", // Domain of your website without pathPrefix.
     pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
