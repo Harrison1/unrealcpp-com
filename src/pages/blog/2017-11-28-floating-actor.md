@@ -17,7 +17,7 @@ description: >-
   How to make an actor float up and down. This is good for floating platforms or
   things that need to bob up and down.
 ---
-**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/HideActor](https://github.com/Harrison1/unrealcpp/tree/master/HideActor)**
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/FindPlayerPosition](https://github.com/Harrison1/unrealcpp/tree/master/FindPlayerPosition)**
 
 *For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
 
