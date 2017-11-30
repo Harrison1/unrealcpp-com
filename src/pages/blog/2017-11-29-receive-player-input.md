@@ -72,6 +72,23 @@ In editor let's create an `Action` mapping called **Grow** and bind it to the `G
 
 // TODO get images and scales
 
+#### project settings
+[![project settings](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-project-settings_scb9ke.jpg "project settings")](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-project-settings_scb9ke.jpg)
+
+#### add inputs
+[![new pawn movement comp](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-movement-input_uejdk8.png "new pawn movement comp")](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-movement-input_uejdk8.png)
+
+1. `MoveX`   
+    I: *Scale* 1.0  
+    K: *Scale* -1.0  
+
+2. `MoveY`   
+    J: *Scale* -1.0  
+    L: *Scale* 1.0  
+
+3. `Grow`   
+    G
+
 In the `.cpp` file make sure to `#include` `Camera/CameraComponent.h`, `Components/InputComponent.h`, and `Components/StaticMeshComponent.h`.
 
 #### include files
