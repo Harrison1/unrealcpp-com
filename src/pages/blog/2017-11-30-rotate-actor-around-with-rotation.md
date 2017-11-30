@@ -80,11 +80,11 @@ ARotateActorAroundWithRotation::ARotateActorAroundWithRotation()
 }
 ```
 
-All of our logic is going to go in the `Tick` function. Every frame we want to set our fixed location by using setting our `NewLocation` to a fixed `FVector` variable. In your game might want to connect the `NewLocation` to another actor or at least make it `EditAnywhere` in the editor, but for this tutorial let's just set it and move on. Alternatively, you can set `NewLocation` to the player location so the actor always rotates around the player.
+All of our logic is going to go in the `Tick` function. Every frame we want to set our fixed location by setting our `NewLocation` to a fixed `FVector` variable. In your game you might want to connect the `NewLocation` to another actor or at least make it `EditAnywhere` in the editor, but for this tutorial let's just set it and move on. Alternatively, you can set `NewLocation` to the player location so the actor always rotates around the player.
 
-Next want to add to our `AngleAxis` variable which will indicate the degree around the point the actor should move to. We add `DeltaTime` multiplied by our `Multiplier` for smooth movement. If `AngleAxis` is greater than or equal to 360 we re-set the `AngleAxis` to 0.
+Next, we want to add to our `AngleAxis` variable which will indicate the degree around the point the actor should move to. We add `DeltaTime` multiplied by our `Multiplier` for smooth movement. If `AngleAxis` is greater than or equal to 360 we re-set the `AngleAxis` to 0.
 
-Next, we'll set `RotateValue` from using the `RotateAngleAxis` functions from our `Dimensions` vector. This will return the amount of units needed to move the actor to its next location. Add `RotateValue`'s X, Y, and Z values to our `NewLocation` variable accordingly. Next, we'll configure our new ration by makeing a `FRotator` value and setting the value to `FRotator(0, AngleAxis, 0)`. Then we'll make a `FQuat` using the `NewRotation` value.
+Next, we'll set `RotateValue` by using the `RotateAngleAxis` functions from our `Dimensions` vector. This will return the amount of units needed to move the actor to its next location. Add `RotateValue`'s X, Y, and Z values to our `NewLocation` variable accordingly. Next, we'll configure our new ration by makeing a `FRotator` value and setting the value to `FRotator(0, AngleAxis, 0)`. Then we'll make a `FQuat` using the `NewRotation` value.
 
 Finally, set the actor's location and rotation with `SetActorLocationAndRotation` to our `NewLocation`. 
 
