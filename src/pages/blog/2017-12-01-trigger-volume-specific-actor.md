@@ -1,52 +1,50 @@
 ---
 templateKey: blog-post
-path: /trigger-box-specific-actor
-title: Trigger Box With Specific Actor
+path: /trigger-volume-specific-actor
+title: Trigger Volume With Specific Actor
 author: Harrison McGuire
 authorImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511952457/harrison-mcguire_c8hczw.jpg
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/v1511657695/trigger-box-specific-actor_wqp3ew.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1511657696/trigger-volume-specific-actor_nl11cl.jpg
 tags:
   - trigger
   - overlap
 uev: 4.18.1
-date: 2017-12-01T14:43:44.226Z
+date: 2017-12-01T15:14:44.226Z
 description: >-
-  Trigger overlap events only when a specific actor enters the TriggerBox.
+  Trigger overlap events only when a specific actor enters the TriggerVolume.
 ---
-**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/TriggerBoxSpecificActor](https://github.com/Harrison1/unrealcpp/tree/master/TriggerBoxSpecificActor)**
+**Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/TriggerVolumeSpecificActor](https://github.com/Harrison1/unrealcpp/tree/master/TriggerVolumeSpecificActor)**
 
 *For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
 
 For this tutorial will trigger overlap events by a specific actor. 
 
-Create a new `C++` `TriggerBox` class and call it **TriggerBoxSpecificActor**. In the header file we will declare two `void` overlap functions and `AActor` class for our specific actor. Below is the final header code.
+Create a new `C++` `TriggerVolume` class and call it **TriggerVolumeSpecificActor**. In the header file we will declare two `void` overlap functions and `AActor` class for our specific actor. Below is the final header code.
 
-### TriggerBoxSpecificActor.h
+### TriggerVolumeSpecificActor.h
 ```cpp
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Engine/TriggerBox.h"
-#include "TriggerBoxSpecificActor.generated.h"
-
+#include "Engine/TriggerVolume.h"
+#include "TriggerVolumeSpecificActor.generated.h"
 
 UCLASS()
-class UNREALCPP_API ATriggerBoxSpecificActor : public ATriggerBox
+class UNREALCPP_API ATriggerVolumeSpecificActor : public ATriggerVolume
 {
 	GENERATED_BODY()
 
 protected:
-
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	
-public:
 
+public:
+	
 	// constructor sets default values for this actor's properties
-	ATriggerBoxSpecificActor();
+	ATriggerVolumeSpecificActor();
 
 	// overlap begin function
 	UFUNCTION()
@@ -59,15 +57,15 @@ public:
 	// specific actor for overlap
 	UPROPERTY(EditAnywhere)
 	class AActor* SpecificActor;
-	
+
 };
 ```
 
-In the `.cpp` file to help us visualize the trigger box, we will have to `#include` the `DrawDebugHelpers.h` file.
+In the `.cpp` file to help us visualize the trigger volume, we will have to `#include` the `DrawDebugHelpers.h` file.
 
 #### include files
 ```cpp
-#include "TriggerBoxSpecificActor.h"
+#include "TriggerVolumeSpecificActor.h"
 // include draw debug helpers header file
 #include "DrawDebugHelpers.h"
 ```
@@ -84,11 +82,11 @@ In the actor's init function we will register the overlap events with `OnActorBe
 
 ##### register overlap events
 ```cpp
-ATriggerBoxSpecificActor::ATriggerBoxSpecificActor()
+ATriggerVolumeSpecificActor::ATriggerVolumeSpecificActor()
 {
     //Register Events
-    OnActorBeginOverlap.AddDynamic(this, &ATriggerBoxSpecificActor::OnOverlapBegin);
-    OnActorEndOverlap.AddDynamic(this, &ATriggerBoxSpecificActor::OnOverlapEnd);
+    OnActorBeginOverlap.AddDynamic(this, &ATriggerVolumeSpecificActor::OnOverlapBegin);
+    OnActorEndOverlap.AddDynamic(this, &ATriggerVolumeSpecificActor::OnOverlapEnd);
 }
 ```
 
@@ -97,20 +95,20 @@ On `BeginPlay` we will draw the debug box using `DrawDebugBox`.
 #### DrawDebugBox
 ```cpp
 // Called when the game starts or when spawned
-void ATriggerBoxSpecificActor::BeginPlay()
+void ATriggerVolumeSpecificActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-    DrawDebugBox(GetWorld(), GetActorLocation(), GetComponentsBoundingBox().GetExtent(), FColor::Green, true, -1, 0, 5);
+	DrawDebugBox(GetWorld(), GetActorLocation(), GetActorScale()*100, FColor::Turquoise, true, -1, 0, 5);
 	
 }
 ```
 
-Next, we will write our overlap functions that simply print a message to the screen when our specift actor enters the and exits the `TriggerBox`. In the overlap function we put `OtherActor == SpecificActor` to check if the actor in the `TriggerBox` is our specific actor.
+Next, we will write our overlap functions that simply print a message to the screen when our specift actor enters the and exits the `TriggerVolume`. In the overlap function we put `OtherActor == SpecificActor` to check if the actor in the `TriggerVolume` is our specific actor.
 
 #### overlap functions
 ```cpp
-void ATriggerBoxSpecificActor::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
+void ATriggerVolumeSpecificActor::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
 {
     //if the overlapping actor is the specific actor we identified in the editor
     if (OtherActor && (OtherActor != this) && OtherActor == SpecificActor )
@@ -120,45 +118,45 @@ void ATriggerBoxSpecificActor::OnOverlapBegin(class AActor* OverlappedActor, cla
     }
 }
 
-void ATriggerBoxSpecificActor::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
+void ATriggerVolumeSpecificActor::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
 {
     //if the overlapping actor is the specific actor we identified in the editor
     if (OtherActor && (OtherActor != this) && OtherActor == SpecificActor )
     {
         print("Overlap End");
-        printFString("%s has left the Trigger Box", *OtherActor->GetName());
+        printFString("%s has left the Trigger Volume", *OtherActor->GetName());
     }
 }
 ```
 
-Compile the code. Drag and drop your new actor into your game. Add an actor the **Specific Actor** in the actor's details panel. Push play and push or shoot the specific actor into the `TriggerBox` to trigger the overlap events. Below is the final `.cpp` file.
+Compile the code. Drag and drop your new actor into your game. Add an actor the **Specific Actor** in the actor's details panel. Push play and push or shoot the specific actor into the `TriggerVolume` to trigger the overlap events. Below is the final `.cpp` file.
 
-### TriggerBoxSpecificActor.cpp
+### TriggerVolumeSpecificActor.cpp
 ```cpp
 #define print(text) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 1.5, FColor::Green,text)
 #define printFString(text, fstring) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT(text), fstring))
 
-#include "TriggerBoxSpecificActor.h"
+#include "TriggerVolumeSpecificActor.h"
 // include draw debug helpers header file
 #include "DrawDebugHelpers.h"
 
-ATriggerBoxSpecificActor::ATriggerBoxSpecificActor()
+ATriggerVolumeSpecificActor::ATriggerVolumeSpecificActor()
 {
     //Register Events
-    OnActorBeginOverlap.AddDynamic(this, &ATriggerBoxSpecificActor::OnOverlapBegin);
-    OnActorEndOverlap.AddDynamic(this, &ATriggerBoxSpecificActor::OnOverlapEnd);
+    OnActorBeginOverlap.AddDynamic(this, &ATriggerVolumeSpecificActor::OnOverlapBegin);
+    OnActorEndOverlap.AddDynamic(this, &ATriggerVolumeSpecificActor::OnOverlapEnd);
 }
 
 // Called when the game starts or when spawned
-void ATriggerBoxSpecificActor::BeginPlay()
+void ATriggerVolumeSpecificActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-    DrawDebugBox(GetWorld(), GetActorLocation(), GetComponentsBoundingBox().GetExtent(), FColor::Green, true, -1, 0, 5);
+	DrawDebugBox(GetWorld(), GetActorLocation(), GetActorScale()*100, FColor::Turquoise, true, -1, 0, 5);
 	
 }
 
-void ATriggerBoxSpecificActor::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
+void ATriggerVolumeSpecificActor::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
 {
     //if the overlapping actor is the specific actor we identified in the editor
     if (OtherActor && (OtherActor != this) && OtherActor == SpecificActor )
@@ -168,13 +166,14 @@ void ATriggerBoxSpecificActor::OnOverlapBegin(class AActor* OverlappedActor, cla
     }
 }
 
-void ATriggerBoxSpecificActor::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
+void ATriggerVolumeSpecificActor::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
 {
     //if the overlapping actor is the specific actor we identified in the editor
     if (OtherActor && (OtherActor != this) && OtherActor == SpecificActor )
     {
         print("Overlap End");
-        printFString("%s has left the Trigger Box", *OtherActor->GetName());
+        printFString("%s has left the Trigger Volume", *OtherActor->GetName());
     }
 }
+
 ```
