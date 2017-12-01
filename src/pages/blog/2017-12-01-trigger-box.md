@@ -21,7 +21,7 @@ description: >-
 
 In this tutorial will trigger an event when the character overlaps a `TriggerBox`.
 
-Create a new `C++` actor class and call it `MyTriggerBox`. In the header file add `OnOverlapBegin` and `OnOverlapEnd` functions. Below is the final header file.
+Create a new `C++` `TriggerBox` class and call it `MyTriggerBox`. In the header file add `OnOverlapBegin` and `OnOverlapEnd` functions. Below is the final header file.
 
 ### MyTriggerBox.h
 ```cpp
