@@ -7,7 +7,7 @@ authorImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511952457/harrison-mcguire_c8hczw.jpg
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/v1511657695/rotating-angle-axis_n85b1n.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1511657694/rotate-around-vector_sufcb7.jpg
 tags:
   - rotation
 uev: 4.18.1
