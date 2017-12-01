@@ -7,7 +7,7 @@ authorImage: >-
   https://res.cloudinary.com/several-levels/image/upload/v1511952457/harrison-mcguire_c8hczw.jpg
 authorTwitter: HarryMcGueeze
 featuredImage: >-
-  https://res.cloudinary.com/several-levels/image/upload/v1511657695/rotating-actor_amkyg8.jpg
+  https://res.cloudinary.com/several-levels/image/upload/v1512124932/set-actor-location-rotation_exukw7.jpg
 tags:
   - location
   - rotation
