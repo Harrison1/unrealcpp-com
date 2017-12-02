@@ -50,9 +50,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
-              author
-              authorImage
-              authorTwitter
               date(formatString: "MMMM DD, YYYY")
               description
               featuredImage

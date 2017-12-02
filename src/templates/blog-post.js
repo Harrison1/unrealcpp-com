@@ -7,6 +7,7 @@ import UnrealVersion from '../components/UnrealVersion'
 import CommentLink from '../components/CommentLink'
 import AuthorCard from '../components/AuthorCard'
 import Footer from '../components/Footer'
+import author from '../author/harrison.json'
 
 const Template = ({ data }) => {
 
@@ -52,7 +53,7 @@ const Template = ({ data }) => {
 
                       <hr />
 
-                      <AuthorCard image={ post.frontmatter.authorImage } name={ post.frontmatter.author } twitter={ post.frontmatter.authorTwitter } />
+                      <AuthorCard image={ author.image } name={ author.name } twitter={ author.twitter } />
 
                   </div>
 
@@ -75,9 +76,6 @@ query BlogPostByPath($path: String!) {
   markdownRemark(frontmatter: { path: { eq: $path } }) {
     html
     frontmatter {
-      author
-      authorImage
-      authorTwitter
       date(formatString: "MMMM DD, YYYY")
       featuredImage
       featuredVideo
