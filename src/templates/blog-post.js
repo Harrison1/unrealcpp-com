@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import Navbar from '../components/Navbar'
 import Tag from '../components/Tag'
 import UnrealVersion from '../components/UnrealVersion'
-import CommentLink from '../components/CommentLink'
+import CommentList from '../components/CommentList'
 import AuthorCard from '../components/AuthorCard'
 import Footer from '../components/Footer'
 import author from '../author/harrison.json'
@@ -49,11 +49,11 @@ const Template = ({ data }) => {
 
                       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-                      <CommentLink link={ post.frontmatter.video } />
-
                       <hr />
 
                       <AuthorCard image={ author.image } name={ author.name } twitter={ author.twitter } />
+
+                      <CommentList />
 
                   </div>
 
