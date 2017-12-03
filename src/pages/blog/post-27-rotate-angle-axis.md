@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /rotate-angle-axis
 title: Rotate Angle Axis
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-angle-axis_rkpyse.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-angle-axis_rkpyse.jpg
 tags:
   - rotation
 uev: 4.18.1

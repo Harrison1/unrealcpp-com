@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /receive-player-input
 title: Receive Player Input
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222398/moving-pawn_vstq9s.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/moving-pawn_vstq9s.jpg
+video: youtube.com
 tags:
   - intermediate
   - pawn

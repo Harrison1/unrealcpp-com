@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /debug-logging
 title: Debug Logging
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222942/console-log_zmjgfh.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/console-log_zmjgfh.jpg
+video: youtube.com
 tags:
   - beginner
   - log

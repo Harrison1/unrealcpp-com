@@ -133,7 +133,7 @@ module.exports = {
                       path
                       description
                       title
-                      featuredImage
+                      image
                       date
                       tags
                     }

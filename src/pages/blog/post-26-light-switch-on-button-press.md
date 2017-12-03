@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /light-switch-push-button
 title: Light Switch on Button Press
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-button_cvzh0l.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-button_cvzh0l.jpg
+video: youtube.com
 tags:
   - intermediate
 uev: 4.18.1

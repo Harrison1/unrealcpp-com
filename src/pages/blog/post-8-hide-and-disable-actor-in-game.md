@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /hide-and-disable-actor
 title: Hide and Disable Actor in Game
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222942/hide-actor_oqlvf7.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/hide-actor_oqlvf7.jpg
+video: youtube.com
 tags:
   - beginner
 uev: 4.18.1

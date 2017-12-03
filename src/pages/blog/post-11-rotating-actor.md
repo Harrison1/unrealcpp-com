@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /rotating-actor
 title: Rotating Actor
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-actor_kuncdl.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-actor_kuncdl.jpg
 tags:
   - rotation
 uev: 4.18.1

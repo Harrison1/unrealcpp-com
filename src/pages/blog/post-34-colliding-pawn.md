@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /colliding-pawn
 title: Colliding Pawn UE4 Tutorial
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222397/colliding-pawn_m6rgd5.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222397/colliding-pawn_m6rgd5.jpg
+video: youtube.com
 tags:
   - intermediate
   - pawn

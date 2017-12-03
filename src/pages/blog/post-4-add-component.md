@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /add-component
 title: Add Component
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1511648024/add-billboard-component_yhhmzf.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1511648024/add-billboard-component_yhhmzf.jpg
+video: youtube.com
 tags:
   - beginner
   - component

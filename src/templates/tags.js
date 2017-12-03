@@ -35,7 +35,7 @@ export default function Tags({ pathContext }) {
 
                             {post.map(post => (
 
-                                    <BlogCard key={ post.id } path={ post.frontmatter.path } image={ post.frontmatter.featuredImage }  tag={ post.frontmatter.tags[0] } title={ post.frontmatter.title } date ={ post.frontmatter.date } description={ post.frontmatter.description } authorImage={ post.frontmatter.authorImage } authorName={ post.frontmatter.author } />
+                                    <BlogCard key={ post.id } path={ post.frontmatter.path } image={ post.frontmatter.image }  tag={ post.frontmatter.tags[0] } title={ post.frontmatter.title } date ={ post.frontmatter.date } description={ post.frontmatter.description } authorImage={ post.frontmatter.authorImage } authorName={ post.frontmatter.author } />
                             ))}
 
                         </div>

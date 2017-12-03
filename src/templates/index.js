@@ -27,7 +27,7 @@ const IndexPage = ({ data, pathContext }) => {
 
                     {group.map(({ node }) => (
 
-                        <BlogCard key={ node.id } path={ node.frontmatter.path } image={ node.frontmatter.featuredImage }  tag={ node.frontmatter.tags[0] } title={ node.frontmatter.title } date ={ node.frontmatter.date } description={ node.frontmatter.description } authorImage={ author.cardimage } authorName={ author.name } />
+                        <BlogCard key={ node.id } path={ node.frontmatter.path } image={ node.frontmatter.image }  tag={ node.frontmatter.tags[0] } title={ node.frontmatter.title } date ={ node.frontmatter.date } description={ node.frontmatter.description } authorImage={ author.cardimage } authorName={ author.name } />
 
                     ))}
 

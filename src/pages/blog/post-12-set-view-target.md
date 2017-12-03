@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /set-view-target
 title: Set View Target
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221876/set-view-target_xnz2ah.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/set-view-target_xnz2ah.jpg
 tags:
   - view target
 uev: 4.18.1

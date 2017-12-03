@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /set-view-target-with-blend
 title: Set View Target With Blend
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221877/set-view-target-with-blend_qdc2za.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221877/set-view-target-with-blend_qdc2za.jpg
 tags:
   - view target
 uev: 4.18.1

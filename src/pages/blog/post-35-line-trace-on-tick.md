@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /line-trace-on-tick
 title: Line Trace on Tick
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222398/actor-line-trace-tick_pkkqkf.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/actor-line-trace-tick_pkkqkf.jpg
+video: youtube.com
 tags:
   - beginner
   - line trace

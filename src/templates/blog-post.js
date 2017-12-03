@@ -20,7 +20,7 @@ const Template = ({ data }) => {
 
       <Helmet title={`Unreal C++ | ${post.frontmatter.title}`} />
 
-      <div className="blog-post-header" style={{ backgroundImage: `url(${ post.frontmatter.featuredImage })` }}>
+      <div className="blog-post-header" style={{ backgroundImage: `url(${ post.frontmatter.image })` }}>
 
         { post.frontmatter.tags.map((n, i) => {
               return <Tag key={ i } tag= { n } />
@@ -49,7 +49,7 @@ const Template = ({ data }) => {
 
                       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-                      <CommentLink link={ post.frontmatter.featuredVideo } />
+                      <CommentLink link={ post.frontmatter.video } />
 
                       <hr />
 
@@ -77,8 +77,8 @@ query BlogPostByPath($path: String!) {
     html
     frontmatter {
       date(formatString: "MMMM DD, YYYY")
-      featuredImage
-      featuredVideo
+      image
+      video
       path
       tags
       title

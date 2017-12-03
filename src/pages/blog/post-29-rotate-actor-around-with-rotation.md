@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /rotate-actor-around-player-with-rotation
 title: Rotate Actor Around Player With Rotation
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotate-object-with-rotation_x1loge.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotate-object-with-rotation_x1loge.jpg
 tags:
   - rotation
   - location

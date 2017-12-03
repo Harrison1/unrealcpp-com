@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /rotate-around-vector
 title: Rotate Around Vector
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1511657694/rotate-around-vector_sufcb7.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1511657694/rotate-around-vector_sufcb7.jpg
 tags:
   - rotation
 uev: 4.18.1

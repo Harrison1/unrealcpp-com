@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /floating-actor
 title: Floating Actor
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512222398/floating-actor_mntqfm.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/floating-actor_mntqfm.jpg
+video: youtube.com
 tags:
   - beginner
   - ue4 tutorial

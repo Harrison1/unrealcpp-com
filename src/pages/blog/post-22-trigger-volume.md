@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /trigger-volume
 title: Trigger Volume
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-volume_uw7r5i.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-volume_uw7r5i.jpg
 tags:
   - trigger
 uev: 4.18.1

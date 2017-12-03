@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /trigger-volume-specific-actor
 title: Trigger Volume With Specific Actor
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box-specific-actor_jtm9pb.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box-specific-actor_jtm9pb.jpg
 tags:
   - trigger
   - overlap

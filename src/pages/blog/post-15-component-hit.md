@@ -2,7 +2,7 @@
 templateKey: blog-post
 path: /on-component-hit
 title: Register Component Hit
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1511657694/on-hit-component_etggr8.jpg
+image: https://res.cloudinary.com/several-levels/image/upload/v1511657694/on-hit-component_etggr8.jpg
 tags:
   - component
   - hit

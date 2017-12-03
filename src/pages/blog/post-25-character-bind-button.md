@@ -2,8 +2,8 @@
 templateKey: blog-post
 path: /character-bind-button
 title: Bind Button to Character
-featuredImage: https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg
-featuredVideo: youtube.com
+image: https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg
+video: youtube.com
 tags:
   - beginner
   - bind button

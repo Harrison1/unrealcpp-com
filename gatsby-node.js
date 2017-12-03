@@ -52,8 +52,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               description
-              featuredImage
-              featuredVideo
+              image
+              video
               path
               tags
               templateKey
