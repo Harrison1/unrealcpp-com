@@ -3,11 +3,11 @@ import Comment from './Comment'
 
 class CommentList extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             comments: [],
             zero: 'Loading ...'
-        };
+        }
     }
 
     setStateAsync(state) {
@@ -28,9 +28,9 @@ class CommentList extends Component {
 
     render() {
 
-        let commentList = null;
+        let commentList = null
         if (this.state.comments.length) {
-            commentList = this.state.comments.map( comment => <Comment key={ comment.id } name={ comment.snippet.topLevelComment.snippet.authorDisplayName } img={ comment.snippet.topLevelComment.snippet.authorProfileImageUrl.replace('s28', 's48') } text={ comment.snippet.topLevelComment.snippet.textDisplay } link={ comment.snippet.topLevelComment.snippet.authorChannelUrl } date={ comment.snippet.topLevelComment.snippet.publishedAt }/> )
+            commentList = this.state.comments.map( comment => <Comment key={ comment.id } name={ comment.snippet.topLevelComment.snippet.authorDisplayName } img={ comment.snippet.topLevelComment.snippet.authorProfileImageUrl.replace('s28', 's48') } text={ comment.snippet.topLevelComment.snippet.textDisplay } link={ comment.snippet.topLevelComment.snippet.authorChannelUrl } date={ comment.snippet.topLevelComment.snippet.publishedAt } replies={ comment.hasOwnProperty('replies') ? comment.replies.comments : null } /> )
         } else {
             commentList = this.state.zero;
         }
