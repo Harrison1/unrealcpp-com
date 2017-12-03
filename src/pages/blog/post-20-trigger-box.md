@@ -3,6 +3,7 @@ templateKey: blog-post
 path: /trigger-box
 title: Trigger Box
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box_pnwkdo.jpg
+video: DzJasz19EnA
 tags:
   - trigger
 uev: 4.18.1

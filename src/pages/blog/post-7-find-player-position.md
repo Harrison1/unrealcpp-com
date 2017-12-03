@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /find-player-position
 title: Find Player Position
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/get-player-position_rd1bss.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
   - location

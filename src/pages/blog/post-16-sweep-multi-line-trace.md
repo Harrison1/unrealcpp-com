@@ -3,6 +3,7 @@ templateKey: blog-post
 path: /sweep-multi-line-trace
 title: Sweep Multi Line Trace
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222399/sweep-actor_ht78xh.jpg
+video: DzJasz19EnA
 tags:
   - sweep
   - multi

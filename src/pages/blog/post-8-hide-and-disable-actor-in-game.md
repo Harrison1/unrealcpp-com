@@ -3,15 +3,13 @@ templateKey: blog-post
 path: /hide-and-disable-actor
 title: Hide and Disable Actor in Game
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/hide-actor_oqlvf7.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
 uev: 4.18.1
 date: 2017-11-30T18:30:13.628Z
 description: You have to do three things to completely hide an actor in game
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lIY6zFL95hE" frameborder="0" allowfullscreen></iframe>
-
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/HideActor](https://github.com/Harrison1/unrealcpp/tree/master/HideActor)**
 
 *For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*

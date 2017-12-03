@@ -3,6 +3,7 @@ templateKey: blog-post
 path: /rotate-angle-axis
 title: Rotate Angle Axis
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-angle-axis_rkpyse.jpg
+video: DzJasz19EnA
 tags:
   - rotation
 uev: 4.18.1

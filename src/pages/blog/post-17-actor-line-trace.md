@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /actor-line-trace
 title: Actor Line Trace
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222941/actor-line-trace_ntz948.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - intermediate
   - line trace

@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /light-switch-trigger
 title: Light Switch Overlap Trigger
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-overlap_tkekfo.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
   - light

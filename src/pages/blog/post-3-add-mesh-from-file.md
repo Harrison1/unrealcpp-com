@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /add-mesh-from-file
 title: Add Mesh From File
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/add-mesh-from-file_qwbthi.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
   - helpers

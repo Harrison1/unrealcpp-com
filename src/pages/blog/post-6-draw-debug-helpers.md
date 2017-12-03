@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /draw-debug-helpers
 title: Draw Debug Helpers
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222397/draw-debug-helpers_hiskxe.jpg
-video: youtube.com
+video: UtfMjHtJCoo
 tags:
   - beginner
   - debug

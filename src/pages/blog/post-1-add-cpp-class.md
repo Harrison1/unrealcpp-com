@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /add-actor-class
 title: Add Actor Class
 image: https://res.cloudinary.com/several-levels/image/upload/v1511712005/new-cpp-class_ucxd6a.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
   - actor

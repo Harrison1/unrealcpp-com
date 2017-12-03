@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /get-number-of-pawns
 title: Get Number of Pawns
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222399/number-of-pawns_mmkrig.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
 uev: 4.18.1

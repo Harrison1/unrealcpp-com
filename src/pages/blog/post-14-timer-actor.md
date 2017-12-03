@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /timer-actor
 title: Timer Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/timer_pmunrb.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
   - timer

@@ -5,7 +5,8 @@ class CommentList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: []
+            comments: [],
+            zero: 'Loading ...'
         };
     }
 
@@ -16,10 +17,12 @@ class CommentList extends Component {
     }
 
     async componentDidMount() {
-        const res = await fetch('')
+        const res = await fetch('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&order=relevance&videoId=' + this.props.video + '&key=')
         const comments = await res.json()
+        const zero = await comments.items.length ? 'Loading ...' : 'O Comments'
         this.setState({
-            comments: comments.items
+            comments: comments.items,
+            zero: zero
         });
     }
 
@@ -28,15 +31,14 @@ class CommentList extends Component {
         let commentList = null;
         if (this.state.comments.length) {
             commentList = this.state.comments.map( comment => <Comment key={ comment.id } name={ comment.snippet.topLevelComment.snippet.authorDisplayName } img={ comment.snippet.topLevelComment.snippet.authorProfileImageUrl.replace('s28', 's48') } text={ comment.snippet.topLevelComment.snippet.textDisplay } link={ comment.snippet.topLevelComment.snippet.authorChannelUrl } date={ comment.snippet.topLevelComment.snippet.publishedAt }/> )
-            console.log(this.state.comments)
         } else {
-            commentList = 'Loading ...';
+            commentList = this.state.zero;
         }
 
         return (
             <div>
                 <h3 className="mb-0">COMMENTS</h3>
-                <p><a href="/" className="youtube-link">Please leave any comments or feedback on the YouTubePage</a></p>
+                <p><a href="/" className="youtube-link">Please leave any comments or feedback on the YouTube page</a></p>
                 <div>{ commentList }</div>
             </div>
         );

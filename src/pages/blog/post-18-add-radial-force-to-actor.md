@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /add-radial-force-to-actor
 title: Add Radial Force to Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/add-radial-force_ceu8dz.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - intermediate
   - force

@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /debug-logging
 title: Debug Logging
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/console-log_zmjgfh.jpg
-video: youtube.com
+video: DzJasz19EnA
 tags:
   - beginner
   - log
