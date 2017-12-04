@@ -13,7 +13,7 @@
       }
     ],
     "headers": [
-      {"source" : "**/*.@(eot|otf|ttf|ttc|woff)",
+      {"source" : "**/*.@(eot|otf|ttf|ttc|woff|css|js)",
       "headers" : [
           {"key" : "Access-Control-Allow-Origin",
           "value" : "max-age=604800"}]
@@ -24,19 +24,13 @@
           "value" : "max-age=604800"
           }]
       },
-      {"source" : "**/*.@(js|css)",
-        "headers" : [
-            {"key" : "Cache-Control",
-            "value" : "max-age=86400"
-            }]
-        },
       {"source" : "404.html",
       "headers" : [
           {"key" : "Cache-Control",
           "value" : "max-age=604800"
           }]
       },
-      { "source":"/service-worker.js", 
+      { "source":"/sw.js", 
         "headers": [
           {"key": "Cache-Control", 
             "value": "no-cache"
