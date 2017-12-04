@@ -13,28 +13,36 @@
       }
     ],
     "headers": [
-      {"source" : "**/*.@(eot|otf|ttf|ttc|woff|css|js)",
+      {"source" : "**/*.@(eot|otf|ttf|ttc|woff|css)",
       "headers" : [
-          {"key" : "Access-Control-Allow-Origin",
-          "value" : "max-age=604800"}]
+          {
+            "key" : "Access-Control-Allow-Origin",
+            "value" : "max-age=604800"
+          }
+        ]
       }, 
-      {"source" : "**/*.@(jpg|jpeg|gif|png)",
+      {"source" : "**/*.@(jpg|jpeg|gif|png|js)",
       "headers" : [
-          {"key" : "Cache-Control",
-          "value" : "max-age=604800"
-          }]
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=604800"
+          }
+        ]
       },
       {"source" : "404.html",
       "headers" : [
           {"key" : "Cache-Control",
-          "value" : "max-age=604800"
-          }]
+            "value" : "max-age=604800"
+          }
+        ]
       },
       { "source":"/sw.js", 
         "headers": [
-          {"key": "Cache-Control", 
+          {
+            "key": "Cache-Control", 
             "value": "no-cache"
-          }] 
+          }
+        ] 
       }
     ]
   }
