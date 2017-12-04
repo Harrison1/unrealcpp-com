@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Comment from './Comment'
+import keys from '../apikeys/keys.json'
 
 class CommentList extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class CommentList extends Component {
     }
 
     async componentDidMount() {
-        const res = await fetch('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&order=relevance&videoId=' + this.props.video + '&key=')
+        const res = await fetch('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&order=relevance&videoId=' + this.props.video + '&key=' + keys.youtube)
         const comments = await res.json()
         const zero = await comments.items.length ? 'Loading ...' : 'O Comments'
         this.setState({
