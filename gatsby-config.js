@@ -9,7 +9,7 @@ module.exports = {
       feed_url: config.siteUrl + config.siteRss,
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `https://api.adorable.io/avatars/285/site.png`,
+      image_url: `https://res.cloudinary.com/several-levels/image/upload/v1512476066/unreal-cpp-logo_izqxay.png`,
       author: config.userName,
       copyright: config.copyright
     }
@@ -64,12 +64,12 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192x192.png",
+            src: "https://res.cloudinary.com/several-levels/image/upload/v1512476066/unreal-cpp-logo_izqxay.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/logos/logo-512x512.png",
+            src: "https://res.cloudinary.com/several-levels/image/upload/v1512476786/unreal-cpp-logo_lg6b9w.png",
             sizes: "512x512",
             type: "image/png"
           }
