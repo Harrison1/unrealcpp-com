@@ -55,7 +55,7 @@ const Template = ({ data }) => {
                       <hr />
 
                       <h3>Author</h3>
-                      <AuthorCard image={ author.image } name={ author.name } twitter={ author.twitter } />
+                      <AuthorCard image={ author.image } name={ author.name } twitter={ author.twitter } email={ author.email } />
 
                       <CommentList video={ post.frontmatter.video } />
 
