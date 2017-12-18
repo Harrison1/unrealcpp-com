@@ -8,8 +8,7 @@ tags:
   - rotation
 uev: 4.18.1
 date: 2017-12-02T11:55:44.226Z
-description: >-
-  Learn how to use the rotate an actor around a vector point.
+description: Learn how to rotate an actor around a vector point.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/RotateAroundVector](https://github.com/Harrison1/unrealcpp/tree/master/RotateAroundVector)**
 
