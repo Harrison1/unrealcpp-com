@@ -5,6 +5,7 @@ import HomeNav from '../components/HomeNav'
 import BlogCard from '../components/BlogCard'
 import Footer from '../components/Footer'
 import TagList from '../components/TagList'
+import author from '../author/harrison.json'
 
 export default function Tags({ pathContext }) {
 
@@ -35,7 +36,7 @@ export default function Tags({ pathContext }) {
 
                             {post.map(post => (
 
-                                    <BlogCard key={ post.id } path={ post.frontmatter.path } image={ post.frontmatter.image }  tag={ post.frontmatter.tags[0] } title={ post.frontmatter.title } date ={ post.frontmatter.date } description={ post.frontmatter.description } authorImage={ post.frontmatter.authorImage } authorName={ post.frontmatter.author } />
+                                    <BlogCard key={ post.id } path={ post.frontmatter.path } image={ post.frontmatter.image }  tag={ post.frontmatter.tags[0] } title={ post.frontmatter.title } date ={ post.frontmatter.date } description={ post.frontmatter.description } authorImage={ author.cardimage } authorName={ author.name } />
                             ))}
 
                         </div>
