@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /add-mesh-from-file
 title: Add Mesh From File
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/add-mesh-from-file_qwbthi.jpg
-video: DzJasz19EnA
+video: g1ZwQ4EqlC8
 tags:
   - beginner
   - helpers
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-11-30T12:30:13.628Z
 description: How to add a mesh to an actor programatically through using the ConstructorHelpers script.
 ---

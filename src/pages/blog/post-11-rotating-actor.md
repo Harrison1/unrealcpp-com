@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /rotating-actor
 title: Rotating Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-actor_kuncdl.jpg
-video: DzJasz19EnA
+video: ku61sRkcQHQ
 tags:
   - rotation
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T05:25:44.226Z
 description: Learn how to rotate an actor every frame.
 ---

@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /set-actor-location-and-rotation
 title: Set Actor Location and Rotation
 image: https://res.cloudinary.com/several-levels/image/upload/v1512124932/set-actor-location-rotation_exukw7.jpg
-video: DzJasz19EnA
+video: g5EQOzkpWbc
 tags:
   - location
   - rotation
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-11-30T20:30:13.628Z
 description: Learn how to set the actor's location and rotation.
 ---
