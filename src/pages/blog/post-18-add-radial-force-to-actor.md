@@ -3,12 +3,12 @@ templateKey: blog-post
 path: /add-radial-impulse-to-actor
 title: Add Radial Impulse to Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/add-radial-force_ceu8dz.jpg
-video: DzJasz19EnA
+video: ifhJXUJ1E2s
 tags:
   - intermediate
   - impulse
   - radial
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T12:25:44.226Z
 description: Add impulse force to all actors that are within the set bounds.
 ---

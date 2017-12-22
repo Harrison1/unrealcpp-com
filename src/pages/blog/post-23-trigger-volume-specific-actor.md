@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /trigger-volume-specific-actor
 title: Trigger Volume With Specific Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box-specific-actor_jtm9pb.jpg
-video: DzJasz19EnA
+video: rvf6uOT5Abs
 tags:
   - trigger
   - overlap
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T06:55:44.226Z
 description: Trigger overlap events only when a specific actor enters the TriggerVolume.
 ---
@@ -15,7 +15,7 @@ description: Trigger overlap events only when a specific actor enters the Trigge
 
 *For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
 
-For this tutorial will trigger overlap events by a specific actor. 
+For this tutorial will trigger overlap events by a specific actor. The tutorial video uses a *TriggerBox*, but the process should be similar.
 
 Create a new `C++` `TriggerVolume` class and call it **TriggerVolumeSpecificActor**. In the header file we will declare two `void` overlap functions and `AActor` class for our specific actor. Below is the final header code.
 

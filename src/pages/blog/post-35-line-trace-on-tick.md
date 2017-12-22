@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /line-trace-on-tick
 title: Line Trace on Tick
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/actor-line-trace-tick_pkkqkf.jpg
-video: DzJasz19EnA
+video: D6G8_PU8ZFY
 tags:
   - intermediate
   - line trace

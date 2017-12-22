@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /rotate-actor-around-player-with-rotation
 title: Rotate Actor Around Player With Rotation
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotate-object-with-rotation_x1loge.jpg
-video: DzJasz19EnA
+video: IKb7pb--U24
 tags:
   - rotation
   - location
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T12:55:44.226Z
 description: Tutorial on how to rotate an actor around a point while always having the actor face the origin.
 ---

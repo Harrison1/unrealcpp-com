@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /create-static-mesh
 title: Create Static Mesh
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/create-static-mesh_c8lsca.jpg
-video: cj7iXacHpxI
+video: R8AhsNo6-Nw
 tags:
   - beginner
   - mesh

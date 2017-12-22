@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /trigger-volume
 title: Trigger Volume
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-volume_uw7r5i.jpg
-video: DzJasz19EnA
+video: Ck3OE_olUr0
 tags:
   - trigger
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T05:55:44.226Z
 description: A tutorial on how to trigger overlap events using a TriggerVolume.
 ---
@@ -14,7 +14,7 @@ description: A tutorial on how to trigger overlap events using a TriggerVolume.
 
 *For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
 
-In this tutorial will trigger an event when the character overlaps a `TriggerVolume`.
+In this tutorial will trigger an event when the character overlaps a `TriggerVolume`. The tutorial video uses a *TriggerBox*, but the process should be similar.
 
 Create a new `C++` `TriggerVolume` class and call it `MyTriggerVolume`. In the header file add `OnOverlapBegin` and `OnOverlapEnd` functions. Below is the final header file.
 

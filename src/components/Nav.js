@@ -17,7 +17,7 @@ const Nav = ( { isHome } ) =>
                     </Link>
                 </li>
                 <li role="menuitem">
-                    <a href="/">
+                    <a href="https://www.patreon.com/harrisonmcguire">
                         Patreon
                     </a>
                 </li>

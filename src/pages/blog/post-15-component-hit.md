@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /on-component-hit
 title: Register Component Hit
 image: https://res.cloudinary.com/several-levels/image/upload/v1511657694/on-hit-component_etggr8.jpg
-video: DzJasz19EnA
+video: BkV7bVcc2EM
 tags:
   - component
   - hit
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T09:25:44.226Z
 description: Learn how to register a hit event on your component.
 ---

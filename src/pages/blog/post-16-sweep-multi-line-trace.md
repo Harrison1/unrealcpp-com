@@ -3,13 +3,13 @@ templateKey: blog-post
 path: /sweep-multi-line-trace
 title: Sweep Multi Line Trace
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222399/sweep-actor_ht78xh.jpg
-video: DzJasz19EnA
+video: Gu5f3-hFFfY
 tags:
   - sweep
   - multi
   - line trace
   - raycast
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T10:25:44.226Z
 description: How to create a sweep multi line trace that returns all the actors that the
   sphere hits.

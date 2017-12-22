@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /rotate-angle-axis
 title: Rotate Angle Axis
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-angle-axis_rkpyse.jpg
-video: DzJasz19EnA
+video: ZoMoG0yhwg8
 tags:
   - rotation
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T10:55:44.226Z
 description: Learn how to use the RotateAngleAxis function.
 ---

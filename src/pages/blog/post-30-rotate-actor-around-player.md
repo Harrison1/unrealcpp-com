@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /rotate-actor-around-player
 title: Rotate Actor Around Player
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-object-around-player_getlvl.jpg
-video: DzJasz19EnA
+video: IKb7pb--U24
 tags:
   - rotation
   - location
@@ -13,7 +13,7 @@ description: Learn how to rotate an actor around your player.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/RotateActorAroundPlayer](https://github.com/Harrison1/unrealcpp/tree/master/RotateActorAroundPlayer)**
 
-*For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post.*
+*For this tutorial we are using the standard first person C++ template with starter content. If you don't know how to add a new actor class to your project, please visit the [Add C++ Actor Class](/add-actor-class) post. The video tutorial sets the location and rotation, but the process is the same*
 
 In this tutorial we will be rotating an actor around the player. Start by creating a new `C++` actor class and call it **RotateActorAroundPlayer**. In the header file we'll create two `float` variables and two `FVector` variables and make them `EditAnywhere` so we can edit them later on inside the editor. Below is the final header file code.
 

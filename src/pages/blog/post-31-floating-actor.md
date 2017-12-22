@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /floating-actor
 title: Floating Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/floating-actor_mntqfm.jpg
-video: DzJasz19EnA
+video: hv-F3BhP1dU
 tags:
   - intermediate
   - ue4 tutorial
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T14:55:44.226Z
 description: How to make an actor float up and down. This is good for floating platforms or
   things that need to bob up and down.

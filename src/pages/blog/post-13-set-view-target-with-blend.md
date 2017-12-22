@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /set-view-target-with-blend
 title: Set View Target With Blend
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221877/set-view-target-with-blend_qdc2za.jpg
-video: DzJasz19EnA
+video: jv78jI5OD00
 tags:
   - view target
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T07:25:44.226Z
 description: A tutorial on how to change the view target of the current player with smooth blending movement.
 ---

@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /rotate-around-vector
 title: Rotate Around Vector
 image: https://res.cloudinary.com/several-levels/image/upload/v1511657694/rotate-around-vector_sufcb7.jpg
-video: DzJasz19EnA
+video: eicFMa3kis4
 tags:
   - rotation
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T11:55:44.226Z
 description: Learn how to rotate an actor around a vector point.
 ---

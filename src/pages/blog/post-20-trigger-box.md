@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /trigger-box
 title: Trigger Box
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box_pnwkdo.jpg
-video: DzJasz19EnA
+video: Ck3OE_olUr0
 tags:
   - trigger
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T15:25:44.226Z
 description: >-
   A tutorial on how to trigger overlap events using a TriggerBox.

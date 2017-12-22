@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /timer-actor
 title: Timer Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/timer_pmunrb.jpg
-video: DzJasz19EnA
+video: bNW5dcZwAb8
 tags:
   - beginner
   - timer
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T08:25:44.226Z
 description: How to set a log message to print to screen every 2 seconds
 ---

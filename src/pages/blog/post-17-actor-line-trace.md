@@ -3,12 +3,12 @@ templateKey: blog-post
 path: /actor-line-trace
 title: Actor Line Trace
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222941/actor-line-trace_ntz948.jpg
-video: DzJasz19EnA
+video: Ii0rw9p6hbI
 tags:
   - intermediate
   - line trace
   - ray cast
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T11:25:44.226Z
 description: How to draw a line trace from an actor
 ---

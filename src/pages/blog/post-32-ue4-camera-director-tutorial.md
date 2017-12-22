@@ -3,12 +3,12 @@ templateKey: blog-post
 path: /ue4-camera-director-tutorial
 title: Unreal Engine 4 Camera Director Tutorial
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222941/camera-director_bzw1mk.jpg
-video: DzJasz19EnA
+video: wB3eBrf2xo8
 tags:
   - intermediate
   - ue4 tutorial
   - camera
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-02T15:55:44.226Z
 description: This is a walkthrough on how to complete Epic's Game-Controlled Cameras Tutorial
 ---

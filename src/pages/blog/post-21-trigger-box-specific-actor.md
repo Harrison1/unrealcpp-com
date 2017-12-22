@@ -3,11 +3,11 @@ templateKey: blog-post
 path: /trigger-box-specific-actor
 title: Trigger Box With Specific Actor
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box-specific-actor_jtm9pb.jpg
-video: DzJasz19EnA
+video: rvf6uOT5Abs
 tags:
   - trigger
   - overlap
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-01T16:25:44.226Z
 description: Trigger overlap events only when a specific actor enters the TriggerBox.
 ---

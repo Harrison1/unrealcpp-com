@@ -16,7 +16,7 @@ export default function Tags({ pathContext }) {
         return (
             <div className="home-template">
 
-                <header className="site-header outer" style={{backgroundImage: 'url(https://res.cloudinary.com/several-levels/image/upload/v1512221876/night-road_ulziln.jpg)' }}>
+                <header className="site-header outer" style={{backgroundImage: 'url(https://res.cloudinary.com/several-levels/image/upload/v1513954042/cover-photo_pdwdqg.jpg)' }}>
                     <div className="inner">
                         <div className="site-header-content">
                             <h1 className="site-title">
@@ -55,7 +55,7 @@ export default function Tags({ pathContext }) {
 
         <div className="home-template">
 
-            <Header image='https://res.cloudinary.com/several-levels/image/upload/v1511624402/night-road_meosxl.jpg' title="Tags" />
+            <Header image='https://res.cloudinary.com/several-levels/image/upload/v1513954042/cover-photo_pdwdqg.jpg' title="Tags" />
         
                 <main id="site-main" className="site-main outer" role="main">
                 
