@@ -5,7 +5,7 @@ import IronImage from './IronImage'
 const BlogCard = ({ path, image, tag, title, date, description, authorImage, authorName}) =>
     <article className="post-card post">
         <Link className="post-card-image-link" to={ path}>
-            <IronImage srcLoaded={ image } />
+            <IronImage srcLoaded={ image.replace('/upload/', '/upload/w_700/') } />
         </Link>
         <div className="post-card-content">
             <Link className="post-card-content-link" to={ path }> 
