@@ -17,7 +17,7 @@ const IndexPage = ({ data, pathContext }) => {
 
       <div className="home-template">
 
-        <Header image='https://res.cloudinary.com/several-levels/image/upload/v1513954042/cover-photo_pdwdqg.jpg' title="Unreal C++" tagline="Unreal Engine 4 C++ Tutorials" />
+        <Header image='https://res.cloudinary.com/several-levels/image/upload/v1513954790/cover-photo_axvhnu.jpg' title="Unreal C++" tagline="Unreal Engine 4 C++ Tutorials" />
       
         <main id="site-main" className="site-main outer" role="main">
 
