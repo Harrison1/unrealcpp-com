@@ -8,7 +8,7 @@ tags:
   - intermediate
   - pawn
   - ue4 tutorial
-uev: 4.18.1
+uev: 4.18.2
 date: 2017-12-03T06:15:44.226Z
 description: How to do the Components and Collision tutorial in the UE4 documentation.
 ---
