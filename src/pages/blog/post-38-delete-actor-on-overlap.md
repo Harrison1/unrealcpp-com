@@ -17,7 +17,7 @@ description: In this tutorial we'll use the destroy method to remove actors from
 
 In this tutorial we will use the destroy method to remove actors from the game world. Create a new **actor** class and call it whatever you want, in this tutorial I will call it `DestroyActorOnOverlap`.
 
-First, in the `.h` we will create an `OnOverlapBegin` function, a `float` variable, a `UStaticMeshComponent`, and a `USphereComponent`. Add the elements to the `public` section of the header file.
+First, in the `.h` file we will create an `OnOverlapBegin` function, a `float` variable, a `UStaticMeshComponent`, and a `USphereComponent`. Add the elements to the `public` section of the header file.
 
 
 #### add to the header file
