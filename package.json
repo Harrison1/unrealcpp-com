@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "unreal-cpp-com",
+  "description": "Unreal Engine 4 C++ blog",
   "version": "1.0.0",
-  "author": "Austin Green",
+  "author": "Harrison McGuire",
   "dependencies": {
-    "gatsby": "^1.9.63",
+    "gatsby": "^1.9.166",
     "gatsby-image": "^1.0.24",
     "gatsby-link": "^1.6.21",
     "gatsby-paginate": "^1.0.6",
