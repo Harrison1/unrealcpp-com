@@ -23,10 +23,10 @@ const Template = ({ data }) => {
 
       <div className="blog-post-header" style={{ backgroundImage: `url(${ post.frontmatter.image })` }}>
 
-        { post.frontmatter.tags.map((n, i) => {
+        {/* { post.frontmatter.tags.map((n, i) => {
               return <Tag key={ i } tag= { n } />
           })
-        }
+        } */}
 
       </div>
       
