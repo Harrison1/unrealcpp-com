@@ -4,9 +4,8 @@ path: /trigger-volume
 title: Trigger Volume
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-volume_uw7r5i.jpg
 video: Ck3OE_olUr0
-tags:
-  - trigger
-uev: 4.18.2
+tags: ["trigger"]
+uev: 4.18.3
 date: 2017-12-02T05:55:44.226Z
 description: A tutorial on how to trigger overlap events using a TriggerVolume.
 ---

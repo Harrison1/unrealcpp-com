@@ -4,10 +4,8 @@ path: /rotate-actor-around-player
 title: Rotate Actor Around Player
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-object-around-player_getlvl.jpg
 video: IKb7pb--U24
-tags:
-  - rotation
-  - location
-uev: 4.18.1
+tags: ["rotation", "location"]
+uev: 4.18.3
 date: 2017-12-02T13:55:44.226Z
 description: Learn how to rotate an actor around your player.
 ---

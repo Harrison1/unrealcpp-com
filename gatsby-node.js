@@ -5,10 +5,12 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const createPaginatedPages = require('gatsby-paginate')
 
 const createTagPages = (createPage, edges) => {
+
   const tagTemplate = path.resolve(`src/templates/tags.js`);
+
   const posts = {};
 
-  _.each(edges, ({ node }) => {
+  edges.forEach(({ node }) => {
     if (node.frontmatter.tags) {
       node.frontmatter.tags.forEach(tag => {
         if (!posts[tag]) {
@@ -23,8 +25,8 @@ const createTagPages = (createPage, edges) => {
     path: "/tags",
     component: tagTemplate,
     context: {
-      posts
-    }
+      posts,
+    },
   });
 
   Object.keys(posts).forEach(tagName => {
@@ -35,8 +37,8 @@ const createTagPages = (createPage, edges) => {
       context: {
         posts,
         post,
-        tag: tagName
-      }
+        tag: tagName,
+      },
     });
   });
 };
@@ -82,7 +84,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const posts = result.data.allMarkdownRemark.edges;
         const blogposts = posts.filter(post => post.node.frontmatter.templateKey === 'blog-post');
 
-        // createTagPages(createPage, blogposts);
+        createTagPages(createPage, blogposts);
 
         createPaginatedPages({
           edges: blogposts,

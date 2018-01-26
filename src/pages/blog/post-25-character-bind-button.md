@@ -4,10 +4,8 @@ path: /character-bind-button
 title: Bind Button to Character
 image: https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg
 video: TnUK3hPczoQ
-tags:
-  - beginner
-  - bind button
-uev: 4.18.2
+tags: ["beginner", "bind button"]
+uev: 4.18.3
 date: 2017-12-02T08:55:44.226Z
 description: Quick tutorial on how to bind a button to your character
 ---

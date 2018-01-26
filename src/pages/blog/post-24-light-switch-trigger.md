@@ -4,11 +4,8 @@ path: /light-switch-trigger
 title: Light Switch Overlap Trigger
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-overlap_tkekfo.jpg
 video: LACvuJgQU5c
-tags:
-  - beginner
-  - light
-  - ue4 tutorial
-uev: 4.18.2
+tags: ["beginner", "light", "ue4 tutorial"]
+uev: 4.18.3
 date: 2017-12-02T07:55:44.226Z
 description: Create a light that turns on and off when a user enters the actor's USphereComponent
 ---

@@ -4,11 +4,8 @@ path: /on-overlap-begin
 title: Character Overlap Events
 image: https://res.cloudinary.com/several-levels/image/upload/v1511785411/character-overlap_sgrnyf.jpg
 video: 84B22sP2L1M
-tags:
-  - beginner
-  - overlap
-  - capsule
-uev: 4.18.2
+tags: ["beginner", "overlap"]
+uev: 4.18.3
 date: 2017-12-01T14:25:44.226Z
 description: Add a capsule component to trigger overlap events for your character. 
 ---

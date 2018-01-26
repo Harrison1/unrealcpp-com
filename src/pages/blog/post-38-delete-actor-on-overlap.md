@@ -4,9 +4,7 @@ path: /delete-actor-on-overlap
 title: Delete Actor on Overlap
 image: https://res.cloudinary.com/several-levels/image/upload/v1516194505/destory-on-overlap_b7f8b3.jpg
 video: s_MPerD24cI
-tags:
-  - beginner
-  - destroy
+tags: ["beginner"]
 uev: 4.18.3
 date: 2018-01-27T12:00:00.226Z
 description: In this tutorial we'll use the destroy method to remove actors from the game world.

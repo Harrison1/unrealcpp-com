@@ -4,10 +4,7 @@ path: /colliding-pawn
 title: Colliding Pawn UE4 Tutorial
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222397/colliding-pawn_m6rgd5.jpg
 video: MFZ51eHFB_A
-tags:
-  - intermediate
-  - pawn
-  - ue4 tutorial
+tags: ["intermediate", "ue4 tutorial", "pawn"]
 uev: 4.18.2
 date: 2017-12-03T06:15:44.226Z
 description: How to do the Components and Collision tutorial in the UE4 documentation.

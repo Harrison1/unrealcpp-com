@@ -4,11 +4,8 @@ path: /line-trace-on-tick
 title: Line Trace on Tick
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/actor-line-trace-tick_pkkqkf.jpg
 video: D6G8_PU8ZFY
-tags:
-  - intermediate
-  - line trace
-  - raycast
-uev: 4.18.2
+tags: ["intermediate", "line trace"]
+uev: 4.18.3
 date: 2017-12-03T07:15:44.226Z
 description: In this tutorial we will shoot a line trace every frame and return the hit result.
 ---

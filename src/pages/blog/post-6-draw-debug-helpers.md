@@ -4,10 +4,8 @@ path: /draw-debug-helpers
 title: Draw Debug Helpers
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222397/draw-debug-helpers_hiskxe.jpg
 video: XPzkCafs1rU
-tags:
-  - beginner
-  - debug
-uev: 4.18.2
+tags: ["beginner", "debug"]
+uev: 4.18.3
 date: 2017-11-30T15:30:13.628Z
 description: Draw multiple variations of debug shapes provided by DrawDebugHelpers.h.
 ---

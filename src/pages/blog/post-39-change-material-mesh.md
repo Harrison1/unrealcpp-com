@@ -4,9 +4,7 @@ path: /change-material-mesh
 title: Change Material Mesh
 image: https://res.cloudinary.com/several-levels/image/upload/v1516194505/change-material-mesh_jko1xl.jpg
 video: s_MPerD24cI
-tags:
-  - beginner
-  - material
+tags: ["beginner", "material"]
 uev: 4.18.3
 date: 2018-01-27T13:00:00.226Z
 description: In this tutorial we'll change a static mesh's material on overlap.

@@ -4,9 +4,8 @@ path: /light-switch-push-button
 title: Light Switch on Button Press
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-button_cvzh0l.jpg
 video: Ypc_LdTXr1Q
-tags:
-  - intermediate
-uev: 4.18.2
+tags: ["intermediate"]
+uev: 4.18.3
 date: 2017-12-02T09:55:44.226Z
 description: How to toggle a light switch when you press a button or a key.
 ---

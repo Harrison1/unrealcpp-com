@@ -4,10 +4,8 @@ path: /create-static-mesh
 title: Create Static Mesh
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/create-static-mesh_c8lsca.jpg
 video: R8AhsNo6-Nw
-tags:
-  - beginner
-  - mesh
-uev: 4.18.2
+tags: ["beginner", "mesh"]
+uev: 4.18.3
 date: 2017-11-30T11:30:13.628Z
 description: How to add a static mesh to an actor.
 ---

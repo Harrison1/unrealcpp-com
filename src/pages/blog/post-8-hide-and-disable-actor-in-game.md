@@ -4,9 +4,8 @@ path: /hide-and-disable-actor
 title: Hide and Disable Actor in Game
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/hide-actor_oqlvf7.jpg
 video: YzPqBxhDa2Q
-tags:
-  - beginner
-uev: 4.18.2
+tags: ["beginner"]
+uev: 4.18.3
 date: 2017-11-30T18:30:13.628Z
 description: You have to do three things to completely hide an actor in game
 ---

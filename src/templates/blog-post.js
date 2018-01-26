@@ -12,7 +12,19 @@ import author from '../author/harrison.json'
 
 const Template = ({ data }) => {
 
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
+  let tags = ''
+
+  if(Array.isArray(post.frontmatter.tags)) {
+    
+    tags = post.frontmatter.tags.map((n, i) => {
+        return <Tag key={ i } tag= { n } />
+    })
+
+  } else {
+    tags = <div></div>
+  }
+
 
   return (
     <div>
@@ -23,10 +35,7 @@ const Template = ({ data }) => {
 
       <div className="blog-post-header" style={{ backgroundImage: `url(${ post.frontmatter.image })` }}>
 
-        {/* { post.frontmatter.tags.map((n, i) => {
-              return <Tag key={ i } tag= { n } />
-          })
-        } */}
+      { tags }
 
       </div>
       

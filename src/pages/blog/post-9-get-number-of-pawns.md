@@ -4,9 +4,8 @@ path: /get-number-of-pawns
 title: Get Number of Pawns
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222399/number-of-pawns_mmkrig.jpg
 video: FfsEpboXAxw
-tags:
-  - beginner
-uev: 4.18.2
+tags: ["beginner"]
+uev: 4.18.3
 date: 2017-11-30T19:30:13.628Z
 description: How to get the total number of pawns in the scene
 ---

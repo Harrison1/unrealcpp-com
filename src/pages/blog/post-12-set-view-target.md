@@ -4,9 +4,8 @@ path: /set-view-target
 title: Set View Target
 image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/set-view-target_xnz2ah.jpg
 video: UeZ3eSGRUG8
-tags:
-  - view target
-uev: 4.18.2
+tags: ["view target"]
+uev: 4.18.3
 date: 2017-12-01T06:25:44.226Z
 description: A tutorial on how to change the view target of the current player.
 ---

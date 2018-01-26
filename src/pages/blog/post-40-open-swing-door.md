@@ -4,9 +4,7 @@ path: /open-swing-door
 title: Open Swing Door
 image: https://res.cloudinary.com/several-levels/image/upload/v1516801153/swing-door_jh0rhn.jpg
 video: s_MPerD24cI
-tags:
-  - intermediate
-  - door
+tags: ["intermediate"]
 uev: 4.18.3
 date: 2018-01-27T15:00:00.226Z
 description: In this tutorial we'll learn how to open a door depending on which way the player is facing when a user presses an action key.

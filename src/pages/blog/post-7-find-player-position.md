@@ -4,10 +4,8 @@ path: /find-player-position
 title: Find Player Position
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/get-player-position_rd1bss.jpg
 video: SovEiHzHlqU
-tags:
-  - beginner
-  - location
-uev: 4.18.2
+tags: ["beginner", "location"]
+uev: 4.18.3
 date: 2017-11-30T17:30:13.628Z
 description: How to find the player's location.
 ---
