@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /open-swing-door
 title: Open Swing Door
 image: https://res.cloudinary.com/several-levels/image/upload/v1516801153/swing-door_jh0rhn.jpg
-video: s_MPerD24cI
+video: LfWpPjBMppg
 tags: ["intermediate"]
 uev: 4.18.3
 date: 2018-01-27T15:00:00.226Z

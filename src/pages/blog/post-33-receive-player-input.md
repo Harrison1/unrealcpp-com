@@ -4,7 +4,7 @@ path: /receive-player-input
 title: Receive Player Input
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/moving-pawn_vstq9s.jpg
 video: vQsOIGWRdXQ
-tags: ["intermediate", "input", "pawn"]
+tags: ["intermediate", "input"]
 uev: 4.18.3
 date: 2017-12-03T05:15:44.226Z
 description: Learn how to add input to a pawn and move it around the scene.

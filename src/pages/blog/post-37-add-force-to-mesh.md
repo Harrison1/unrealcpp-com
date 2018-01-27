@@ -4,7 +4,7 @@ path: /add-force-to-mesh
 title: Add Force to Mesh
 image: https://res.cloudinary.com/several-levels/image/upload/v1515966105/add-force-to-mesh_yxngcj.jpg
 video: s_MPerD24cI
-tags: ["intermediate", "addforce"]
+tags: ["intermediate"]
 uev: 4.18.3
 date: 2018-01-14T18:00:00.226Z
 description: In this tutorial we'll add force to actors and static meshes each time we fire the gun.

@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /change-material-mesh
 title: Change Material Mesh
 image: https://res.cloudinary.com/several-levels/image/upload/v1516194505/change-material-mesh_jko1xl.jpg
-video: s_MPerD24cI
+video: YDbN-3M1v9g
 tags: ["beginner", "material"]
 uev: 4.18.3
 date: 2018-01-27T13:00:00.226Z

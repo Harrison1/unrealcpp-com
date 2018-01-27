@@ -4,7 +4,7 @@ path: /debug-logging
 title: Debug Logging
 image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/console-log_zmjgfh.jpg
 video: 7IDnpurja0w
-tags: ["beginner", "log"]
+tags: ["beginner", "debug"]
 uev: 4.18.2
 date: 2017-11-30T14:30:13.628Z
 description: Logging out commands is helpful to debug a game. UE4 offers a variety of ways

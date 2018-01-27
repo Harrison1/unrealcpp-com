@@ -4,7 +4,7 @@ path: /add-actor-class
 title: Add Actor Class
 image: https://res.cloudinary.com/several-levels/image/upload/v1511712005/new-cpp-class_ucxd6a.jpg
 video: IQo4c9-in_Q
-tags: ["beginner", "actor", "class"]
+tags: ["beginner"]
 uev: 4.18.3
 date: 2017-11-30T10:55:13.628Z 
 description: How to add a new c++ class to our project.
