@@ -17,15 +17,17 @@ class CommentList extends Component {
         });
     }
 
-    // async componentDidMount() {
-    //     const res = await fetch('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&order=relevance&videoId=' + this.props.video + '&key=' + keys.youtube)
-    //     const comments = await res.json()
-    //     const zero = await comments.items.length ? 'Loading ...' : 'O Comments'
-    //     this.setState({
-    //         comments: comments.items,
-    //         zero: zero
-    //     });
-    // }
+    componentDidMount() {
+        fetch('https://www.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&order=relevance&videoId=' + this.props.video + '&key=' + keys.youtube)
+            .then(res => res.json())
+            .then(json => {
+                const zero = json.items.length ? 'Loading ...' : 'O Comments'
+                this.setState({
+                    comments: json.items,
+                    zero: zero
+                });
+            })
+    }
 
     render() {
 
@@ -39,7 +41,7 @@ class CommentList extends Component {
         return (
             <div>
                 <h3 className="mb-0">COMMENTS</h3>
-                <p><a href="/" className="youtube-link">Please leave any comments or feedback on the YouTube page</a></p>
+                <p><a href={`https://www.youtube.com/watch?v=${this.props.video}`} className="youtube-link">Please leave any comments or feedback on the YouTube page</a></p>
                 <div>{ commentList }</div>
             </div>
         );
