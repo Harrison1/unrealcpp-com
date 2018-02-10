@@ -4,7 +4,7 @@ path: /open-swing-door
 title: Open Swing Door
 image: https://res.cloudinary.com/several-levels/image/upload/v1516801153/swing-door_jh0rhn.jpg
 video: LfWpPjBMppg
-tags: ["intermediate"]
+tags: ["intermediate", "door"]
 uev: 4.18.3
 date: 2018-01-27T15:00:00.226Z
 description: In this tutorial we'll learn how to open a door depending on which way the player is facing when a user presses an action key.
@@ -15,7 +15,7 @@ description: In this tutorial we'll learn how to open a door depending on which 
 
 In this Unreal Engine 4 C++ tutorial we will learn how to open a door depending on which way the player is facing and when a user presses an action key. Create a new **actor** class and call it whatever you want, in this tutorial I will call it `SwingDoor`.
 
-First, in the `.h` file we will create our variables. We'll create three `bool` variables to determine the state of the door and four`float` variables to set different numbers for the door. Next, we'll add in functions for toggling the door and building the door itself with a `UStaticMeshComponent` and `UBoxComponent`. All elements to the `public` section of the header file.
+First, in the `.h` file we will create our variables. We'll create three `bool` variables to determine the state of the door and four`float` variables to set different numbers for the door. Next, we'll add in functions for toggling the door and building the door itself with a `UStaticMeshComponent` and `UBoxComponent`. All elements will be under the `public` section of the header file.
 
 #### header variables and functions.
 ```cpp
