@@ -64,3 +64,45 @@ public:
 	UCameraComponent* PlayerCamera;
 	FVector ForwardVector;
 ```
+
+Next, let's move into the actor's `.cpp` file. First we'll define our default values. Declare the mesh component by using `CreateDefaultSubobject` and then set it to the `RootComponent`. Then, set `bHolding` to `false` and `bGravity` to `true`. These will be our default values that our actor starts with. We will set the mesh for the actor later on inside the editor. Below is the constructor function
+
+#### Constructor function
+```cpp
+APickupAndRotateActor::APickupAndRotateActor()
+{
+	PrimaryActorTick.bCanEverTick = true;
+
+	MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("My Mesh"));
+	RootComponent = MyMesh;
+
+	bHolding = false;
+	bGravity = true;
+}
+```
+Moving inot the `BeginPlay` function, we will start by getting the player's **Holding Component**.
+```cpp
+void APickupAndRotateActor::BeginPlay()
+{
+	Super::BeginPlay();
+
+	MyCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+	PlayerCamera = MyCharacter->FindComponentByClass<UCameraComponent>();
+
+	TArray<USceneComponent*> Components;
+ 
+	MyCharacter->GetComponents(Components);
+
+	if(Components.Num() > 0)
+	{
+		for (auto& Comp : Components)
+		{
+			if(Comp->GetName() == "HoldingComponent")
+			{
+				HoldingComp = Cast<USceneComponent>(Comp);
+			}
+		}
+	}
+
+}
+```
