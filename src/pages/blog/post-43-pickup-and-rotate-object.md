@@ -35,3 +35,32 @@ In the new actor's header file, first add in the camera component because we'll 
 #include "Camera/CameraComponent.h"
 ``` 
 
+Next, we'll create the variables we will be using in the actor. We will need to create a `StaticMeshComponent`, a `USceneComponent`, two functions, two `bools`, and four variables to track our player's forward vector and placement were we want to place the `actor` while it's being held.
+
+#### header variables
+```cpp
+...
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* MyMesh;
+
+	UPROPERTY(EditAnywhere)
+	USceneComponent* HoldingComp;
+
+	UFUNCTION()
+	void RotateActor();
+
+	UFUNCTION()
+	void Pickup();
+
+	bool bHolding;
+	bool bGravity;
+
+	FRotator ControlRotation;
+	ACharacter* MyCharacter;
+	UCameraComponent* PlayerCamera;
+	FVector ForwardVector;
+```
