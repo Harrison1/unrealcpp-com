@@ -5,7 +5,7 @@ title: Add Component
 image: https://res.cloudinary.com/several-levels/image/upload/v1511648024/add-billboard-component_yhhmzf.jpg
 video: iHOAZUHYVq0
 tags: ["beginner"]
-uev: 4.18.2
+uev: 4.18.3
 date: 2017-11-30T13:30:13.628Z
 description: In this tutorial we are going to programatically add a Billboard Component to our actor.
 ---

@@ -5,7 +5,7 @@ title: Line Trace on Fire
 image: https://res.cloudinary.com/several-levels/image/upload/v1515966105/line-trace-on-fire_yn1anb.jpg
 video: xgt04-2rKV8
 tags: ["intermediate", "line trace"]
-uev: 4.18.2
+uev: 4.18.3
 date: 2018-01-14T17:00:00.226Z
 description: In this tutorial we will shoot a line trace every time we fire the gun.
 ---
