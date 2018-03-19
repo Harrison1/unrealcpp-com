@@ -6,7 +6,7 @@ image: https://res.cloudinary.com/several-levels/image/upload/v1520943148/pikcup
 video: KsvUYzrTwBw
 tags: ["intermediate"]
 uev: 4.19.0
-date: 2018-03-17T12:00:00.226Z
+date: 2018-03-20T12:00:00.226Z
 description: In this tutorial we'll learn how to pickup and inspect an object similar to Gone Home.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/PickupAndRotateActor](https://github.com/Harrison1/unrealcpp/tree/master/PickupAndRotateActor)**
@@ -18,8 +18,7 @@ In this Unreal Engine 4 C++ tutorial we'll learn how to pickup and inspect an ob
 The first thing we'll do is setup our **Input Actions**. Go to Edit > Project Settings > Input. Under Action Mappings add an Action and title it **Action**. Bind the new action to whatever buttons you want, for this tutorial I will be binding the **Action** button to the `E` key and the `Gamepad Face Button Left`. Next, add a new Action and title it **Inspect**. Bind the **Inspect** action to the `Left Shift` key, the `Right Mouse Button`, and the `Gamepad Right Trigger`.
 
 ### Action Bindings
-[![action bindings](https://res.cloudinary.com/several-levels/image/upload/v1521112199/action-mappings-inspect_ohwadj.jpg
- "action bindings")](https://res.cloudinary.com/several-levels/image/upload/v1521112199/action-mappings-inspect_ohwadj.jpg)
+[![action bindings](https://res.cloudinary.com/several-levels/image/upload/v1521112199/action-mappings-inspect_ohwadj.jpg "action bindings")](https://res.cloudinary.com/several-levels/image/upload/v1521112199/action-mappings-inspect_ohwadj.jpg)
 
 Next, create a new **actor** class and call it whatever you want, in this tutorial I will call it `PickupAndRotateActor`.
 
@@ -74,6 +73,7 @@ APickupAndRotateActor::APickupAndRotateActor()
 	PrimaryActorTick.bCanEverTick = true;
 
 	MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("My Mesh"));
+	MyMesh->SetSimulatePhysics(true);
 	RootComponent = MyMesh;
 
 	bHolding = false;
@@ -386,10 +386,6 @@ void AUnrealCPPCharacter::OnAction()
 	{
 		ToggleItemPickup();
 	}
-	else 
-	{
-		return;
-	}
 }
 
 void AUnrealCPPCharacter::OnInspect()
@@ -425,6 +421,588 @@ Next, we we'll create two more functions that are referred to above that will to
 
 #### ToggleMovemnt and ToggleItemPickup
 ```cpp
+void AUnrealCPPCharacter::ToggleMovement()
+{
+	bCanMove = !bCanMove;
+	bInspecting = !bInspecting;
+	FirstPersonCameraComponent->bUsePawnControlRotation = !FirstPersonCameraComponent->bUsePawnControlRotation;
+	bUseControllerRotationYaw = !bUseControllerRotationYaw;
+}
+
+void AUnrealCPPCharacter::ToggleItemPickup()
+{
+	if(CurrentItem)
+	{
+		bHoldingItem = !bHoldingItem;
+		CurrentItem->Pickup();
+
+		if(!bHoldingItem)
+		{
+			CurrentItem = NULL;
+		}
+	}
+}
+```
+
+Now, move back into the editor. Compile the code. Drag and drop the new `pickup` class into the editor. Add a mesh to the class. I personally adjusted the collision presets. I changed to colission to `Custom`, set everything to `block`, but to `ignore` **Pawn**, **Vehicle**, and **Projectile**. Click **Play** and you should have a working pickup item.
+
+#### Collision presets
+[![collision presets](https://res.cloudinary.com/several-levels/image/upload/v1521459535/pickup-rotate-collision-set_qlwaky.jpg "collision presets")](https://res.cloudinary.com/several-levels/image/upload/v1521459535/pickup-rotate-collision-set_qlwaky.jpg)
+
+Below is the final Code.
+
+### PickupAndRotateActor.h
+```cpp
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "Camera/CameraComponent.h"
+#include "PickupAndRotateActor.generated.h"
+
+UCLASS()
+class UNREALCPP_API APickupAndRotateActor : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	APickupAndRotateActor();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* MyMesh;
+
+	UPROPERTY(EditAnywhere)
+	USceneComponent* HoldingComp;
+
+	UFUNCTION()
+	void RotateActor();
+
+	UFUNCTION()
+	void Pickup();
+
+	bool bHolding;
+	bool bGravity;
+
+	FRotator ControlRotation;
+	ACharacter* MyCharacter;
+	UCameraComponent* PlayerCamera;
+	FVector ForwardVector;
+	
+};
+```
+
+### PickupAndRotateActor.cpp
+```cpp
+#include "PickupAndRotateActor.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameFramework/Character.h"
+
+// Sets default values
+APickupAndRotateActor::APickupAndRotateActor()
+{
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	MyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("My Mesh"));
+	MyMesh->SetSimulatePhysics(true);
+	RootComponent = MyMesh;
+
+	bHolding = false;
+	bGravity = true;
+
+}
+
+// Called when the game starts or when spawned
+void APickupAndRotateActor::BeginPlay()
+{
+	Super::BeginPlay();
+
+	MyCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+	PlayerCamera = MyCharacter->FindComponentByClass<UCameraComponent>();
+
+	TArray<USceneComponent*> Components;
+ 
+	MyCharacter->GetComponents(Components);
+
+	if(Components.Num() > 0)
+	{
+		for (auto& Comp : Components)
+		{
+			if(Comp->GetName() == "HoldingComponent")
+			{
+				HoldingComp = Cast<USceneComponent>(Comp);
+			}
+		}
+	}
+
+}
+
+// Called every frame
+void APickupAndRotateActor::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if(bHolding && HoldingComp)
+	{
+		SetActorLocationAndRotation(HoldingComp->GetComponentLocation(), HoldingComp->GetComponentRotation());
+	}
+
+}
+
+void APickupAndRotateActor::RotateActor()
+{
+	ControlRotation = GetWorld()->GetFirstPlayerController()->GetControlRotation();
+	SetActorRotation(FQuat(ControlRotation));
+}
+
+void APickupAndRotateActor::Pickup()
+{
+	bHolding = !bHolding;	
+	bGravity = !bGravity;
+	MyMesh->SetEnableGravity(bGravity);
+	MyMesh->SetSimulatePhysics(bHolding ? false : true);
+	MyMesh->SetCollisionEnabled(bHolding ? ECollisionEnabled::NoCollision : ECollisionEnabled::QueryAndPhysics);
+
+	if(!bHolding) 
+	{
+		ForwardVector = PlayerCamera->GetForwardVector();
+		MyMesh->AddForce(ForwardVector*100000*MyMesh->GetMass());
+	}
+
+}
+```
+
+### UnrealCPPCharacter.h
+```cpp
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Character.h"
+#include "PickupAndRotateActor/PickupAndRotateActor.h"
+#include "UnrealCPPCharacter.generated.h"
+
+class UInputComponent;
+
+UCLASS(config=Game)
+class AUnrealCPPCharacter : public ACharacter
+{
+	GENERATED_BODY()
+
+	/** Pawn mesh: 1st person view (arms; seen only by self) */
+	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
+	class USkeletalMeshComponent* Mesh1P;
+
+	/** Gun mesh: 1st person view (seen only by self) */
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+	class USkeletalMeshComponent* FP_Gun;
+
+	/** Location on gun mesh where projectiles should spawn. */
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+	class USceneComponent* FP_MuzzleLocation;
+
+	/** First person camera */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	class UCameraComponent* FirstPersonCameraComponent;
+
+	/** Holding Component */
+	UPROPERTY(EditAnywhere)
+	class USceneComponent* HoldingComponent;
+
+	
+
+public:
+	AUnrealCPPCharacter();
+
+protected:
+	virtual void BeginPlay();
+
+	virtual void Tick(float DeltaSeconds) override;
+
+public:
+
+	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
+	float BaseTurnRate;
+
+	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
+	float BaseLookUpRate;
+
+	/** Gun muzzle's offset from the characters location */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
+	FVector GunOffset;
+
+	/** Projectile class to spawn */
+	UPROPERTY(EditDefaultsOnly, Category=Projectile)
+	TSubclassOf<class AUnrealCPPProjectile> ProjectileClass;
+
+	/** Sound to play each time we fire */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
+	class USoundBase* FireSound;
+
+	/** AnimMontage to play each time we fire */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	class UAnimMontage* FireAnimation;
+
+	UPROPERTY(EditAnywhere)
+	class APickupAndRotateActor* CurrentItem;
+
+	bool bCanMove;
+	bool bHoldingItem;
+	bool bInspecting;
+
+	float PitchMax;
+	float PitchMin;
+
+	FVector HoldingComp;
+	FRotator LastRotation;
+
+	FVector Start;
+	FVector ForwardVector;
+	FVector End;
+
+	FHitResult Hit;
+	
+	FComponentQueryParams DefaultComponentQueryParams;
+	FCollisionResponseParams DefaultResponseParam;
+
+
+protected:
+	
+	/** Fires a projectile. */
+	void OnFire();
+
+	/** Action Function */
+	void OnAction();
+
+	/** Inspect Function */
+	void OnInspect();
+	void OnInspectReleased();
+
+	/** Handles moving forward/backward */
+	void MoveForward(float Val);
+
+	/** Handles stafing movement, left and right */
+	void MoveRight(float Val);
+
+	/**
+	 * Called via input to turn at a given rate.
+	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
+	 */
+	void TurnAtRate(float Rate);
+
+	/**
+	 * Called via input to turn look up/down at a given rate.
+	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
+	 */
+	void LookUpAtRate(float Rate);
+
+	// toggle player movement
+	void ToggleMovement();
+
+	// toggle holding item pickup
+	void ToggleItemPickup();
+	
+protected:
+	// APawn interface
+	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
+	// End of APawn interface
+	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
+	/** Returns FirstPersonCameraComponent subobject **/
+	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
+};
+```
+
+### UnrealCPPCharacter.cpp
+```cpp
+#include "UnrealCPPCharacter.h"
+#include "UnrealCPPProjectile.h"
+#include "Animation/AnimInstance.h"
+#include "Camera/CameraComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SphereComponent.h"
+#include "Components/InputComponent.h"
+#include "GameFramework/InputSettings.h"
+#include "HeadMountedDisplayFunctionLibrary.h"
+#include "Kismet/GameplayStatics.h"
+#include "MotionControllerComponent.h"
+#include "DrawDebugHelpers.h"
+
+DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
+
+//////////////////////////////////////////////////////////////////////////
+// AUnrealCPPCharacter
+
+AUnrealCPPCharacter::AUnrealCPPCharacter()
+{
+	// Set size for collision capsule
+	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
+
+	// set our turn rates for input
+	BaseTurnRate = 45.f;
+	BaseLookUpRate = 45.f;
+
+	// Create a CameraComponent	
+	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
+	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
+	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
+	FirstPersonCameraComponent->bUsePawnControlRotation = true;
+
+	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
+	Mesh1P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh1P"));
+	Mesh1P->SetOnlyOwnerSee(true);
+	Mesh1P->SetupAttachment(FirstPersonCameraComponent);
+	Mesh1P->bCastDynamicShadow = false;
+	Mesh1P->CastShadow = false;
+	Mesh1P->RelativeRotation = FRotator(1.9f, -19.19f, 5.2f);
+	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
+
+	// Create a gun mesh component
+	FP_Gun = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FP_Gun"));
+	FP_Gun->SetOnlyOwnerSee(true);			// only the owning player will see this mesh
+	FP_Gun->bCastDynamicShadow = false;
+	FP_Gun->CastShadow = false;
+	// FP_Gun->SetupAttachment(Mesh1P, TEXT("GripPoint"));
+	FP_Gun->SetupAttachment(RootComponent);
+
+	FP_MuzzleLocation = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation"));
+	FP_MuzzleLocation->SetupAttachment(FP_Gun);
+	FP_MuzzleLocation->SetRelativeLocation(FVector(0.2f, 48.4f, -10.6f));
+
+	HoldingComponent = CreateDefaultSubobject<USceneComponent>(TEXT("HoldingComponent"));
+	HoldingComponent->RelativeLocation.X = 50.0f;
+	HoldingComponent->SetupAttachment(FP_MuzzleLocation);
+
+	// Default offset from the character location for projectiles to spawn
+	GunOffset = FVector(100.0f, 0.0f, 10.0f);
+
+	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P, FP_Gun, and VR_Gun 
+	// are set in the derived blueprint asset named MyCharacter to avoid direct content references in C++.
+
+	CurrentItem = NULL;
+	bCanMove = true;
+	bInspecting = false;
+
+}
+
+void AUnrealCPPCharacter::BeginPlay()
+{
+	// Call the base class  
+	Super::BeginPlay();
+
+	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
+	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+
+	Mesh1P->SetHiddenInGame(false, true);
+
+	PitchMax = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->ViewPitchMax;
+	PitchMin = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->ViewPitchMin;
+
+}
+
+//Called every frame
+void AUnrealCPPCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	Start = FirstPersonCameraComponent->GetComponentLocation();
+	ForwardVector = FirstPersonCameraComponent->GetForwardVector();
+	End = ((ForwardVector * 200.f) + Start);
+
+	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1, 0, 1);
+
+	if(!bHoldingItem)
+	{
+		if(GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, DefaultComponentQueryParams, DefaultResponseParam)) 
+		{
+			if(Hit.GetActor()->GetClass()->IsChildOf(APickupAndRotateActor::StaticClass())) 
+			{				
+				CurrentItem = Cast<APickupAndRotateActor>(Hit.GetActor());
+			}
+		}
+		else
+		{
+			CurrentItem = NULL;
+		}
+	}
+
+	if(bInspecting)
+	{
+		if(bHoldingItem)
+		{
+			FirstPersonCameraComponent->SetFieldOfView(FMath::Lerp(FirstPersonCameraComponent->FieldOfView, 90.0f, 0.1f));
+			HoldingComponent->SetRelativeLocation(FVector(0.0f, 50.0f, 50.0f));
+			GetWorld()->GetFirstPlayerController()->PlayerCameraManager->ViewPitchMax = 179.9000002f;
+			GetWorld()->GetFirstPlayerController()->PlayerCameraManager->ViewPitchMin = -179.9000002f;
+			CurrentItem->RotateActor();
+		}
+		else
+		{
+			FirstPersonCameraComponent->SetFieldOfView(FMath::Lerp(FirstPersonCameraComponent->FieldOfView, 45.0f, 0.1f));
+		}
+	}
+	else 
+	{
+		FirstPersonCameraComponent->SetFieldOfView(FMath::Lerp(FirstPersonCameraComponent->FieldOfView, 90.0f, 0.1f));
+
+		if(bHoldingItem)
+		{
+			HoldingComponent->SetRelativeLocation(FVector(50.0f, 0.0f, 0.f));
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Input
+
+void AUnrealCPPCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
+{
+	// set up gameplay key bindings
+	check(PlayerInputComponent);
+
+	// Bind jump events
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+
+	// Bind fire event
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AUnrealCPPCharacter::OnFire);
+
+	// Bind action event
+	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AUnrealCPPCharacter::OnAction);
+
+	// Bind Inspect event
+	PlayerInputComponent->BindAction("Inspect", IE_Pressed, this, &AUnrealCPPCharacter::OnInspect);
+	PlayerInputComponent->BindAction("Inspect", IE_Released, this, &AUnrealCPPCharacter::OnInspectReleased);
+
+	// Bind movement events
+	PlayerInputComponent->BindAxis("MoveForward", this, &AUnrealCPPCharacter::MoveForward);
+	PlayerInputComponent->BindAxis("MoveRight", this, &AUnrealCPPCharacter::MoveRight);
+
+	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
+	// "turn" handles devices that provide an absolute delta, such as a mouse.
+	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
+	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("TurnRate", this, &AUnrealCPPCharacter::TurnAtRate);
+	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	PlayerInputComponent->BindAxis("LookUpRate", this, &AUnrealCPPCharacter::LookUpAtRate);
+}
+
+void AUnrealCPPCharacter::OnFire()
+{
+
+	// try and fire a projectile
+	if (ProjectileClass != NULL)
+	{
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{
+			const FRotator SpawnRotation = GetControlRotation();
+			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+			const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+
+			//Set Spawn Collision Handling Override
+			FActorSpawnParameters ActorSpawnParams;
+			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+			// spawn the projectile at the muzzle
+			World->SpawnActor<AUnrealCPPProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+		}
+	}
+
+	// try and play the sound if specified
+	if (FireSound != NULL)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+	}
+
+	// try and play a firing animation if specified
+	if (FireAnimation != NULL)
+	{
+		// Get the animation object for the arms mesh
+		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
+		if (AnimInstance != NULL)
+		{
+			AnimInstance->Montage_Play(FireAnimation, 1.f);
+		}
+	}
+}
+
+void AUnrealCPPCharacter::MoveForward(float Value)
+{
+	if (Value != 0.0f && bCanMove)
+	{
+		// add movement in that direction
+		AddMovementInput(GetActorForwardVector(), Value);
+	}
+}
+
+void AUnrealCPPCharacter::MoveRight(float Value)
+{
+	if (Value != 0.0f && bCanMove)
+	{
+		// add movement in that direction
+		AddMovementInput(GetActorRightVector(), Value);
+	}
+}
+
+void AUnrealCPPCharacter::TurnAtRate(float Rate)
+{
+	// calculate delta for this frame from the rate information
+	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+}
+
+void AUnrealCPPCharacter::LookUpAtRate(float Rate)
+{
+	// calculate delta for this frame from the rate information
+	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
+void AUnrealCPPCharacter::OnAction()
+{
+	if(CurrentItem && !bInspecting)
+	{
+		ToggleItemPickup();
+	}
+}
+
+void AUnrealCPPCharacter::OnInspect()
+{
+	if(bHoldingItem)
+	{
+		LastRotation = GetControlRotation();
+		ToggleMovement();
+	}
+	else 
+	{
+		bInspecting = true;
+	}
+}
+
+void AUnrealCPPCharacter::OnInspectReleased()
+{
+	if (bInspecting && bHoldingItem) 
+	{
+		GetController()->SetControlRotation(LastRotation);
+		GetWorld()->GetFirstPlayerController()->PlayerCameraManager->ViewPitchMax = PitchMax;
+		GetWorld()->GetFirstPlayerController()->PlayerCameraManager->ViewPitchMin = PitchMin;
+		ToggleMovement();
+	}
+	else 
+	{
+		bInspecting = false;
+	}
+}
+
 void AUnrealCPPCharacter::ToggleMovement()
 {
 	bCanMove = !bCanMove;
