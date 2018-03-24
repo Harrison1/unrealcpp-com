@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-path: /pickup-rotate-and-trhow-object
+path: /pickup-rotate-and-throw-object
 title: Pickup, Rotate, and Throw Object Like Gone Home
 image: https://res.cloudinary.com/several-levels/image/upload/v1520943148/pikcup-rotate-actor_lebmpn.jpg
 video: sXNDeImnipU
