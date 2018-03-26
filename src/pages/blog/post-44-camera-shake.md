@@ -6,7 +6,7 @@ image: https://res.cloudinary.com/several-levels/image/upload/v1520943148/pikcup
 video: sXNDeImnipU
 tags: ["beginner"]
 uev: 4.19.0
-date: 2018-03-24T12:00:00.226Z
+date: 2018-03-31T12:00:00.226Z
 description: In this tutorial we'll learn how to shake the camera every time we fire the gun.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/CameraShake](https://github.com/Harrison1/unrealcpp/tree/master/CameraShake)**
