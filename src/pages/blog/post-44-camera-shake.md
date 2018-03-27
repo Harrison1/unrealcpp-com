@@ -14,3 +14,5 @@ description: In this tutorial we'll learn how to shake the camera every time we 
 *For this tutorial we are using the standard first person C++ template with the starter content.*
 
 In this Unreal Engine 4 C++ tutorial we'll learn how to shake the camera every time we fire the gun.
+
+First start by creating a new **Camera Shake** class.
