@@ -36,7 +36,7 @@ class UNREALCPP_API UMyCameraShake : public UCameraShake
 };
 ```
 
-Next, enter the `.cpp` file to set the values for `MyCameraShake`. In the constructor function we'll set our default values. The default values we define will give the player a random violent shake. You'll adjust the numbers depending on your preference. [Here is the link](http://api.unrealengine.com/INT/API/Runtime/Engine/Camera/UCameraShake/index.html) to the `CameraShake` class in the UE4 documentation that provides all of it's variables and functions. We'll use `FMath::RandRange` to provide a randome shake everytime to the `Pitch` and `Yaw` values.
+Next, enter the `.cpp` file to set the values for `MyCameraShake`. In the constructor function we'll set our default values. The default values we define will give the player a random violent shake. You'll adjust the numbers depending on your preference. [Here is the link](http://api.unrealengine.com/INT/API/Runtime/Engine/Camera/UCameraShake/index.html) to the `CameraShake` class in the UE4 documentation that provides all of it's variables and functions. We'll use `FMath::RandRange` to provide a random shake every time that affects the `Pitch` and `Yaw` values.
 
 #### Constructor Function
 ```cpp
