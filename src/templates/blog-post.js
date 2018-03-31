@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import Tag from '../components/Tag'
 import UnrealVersion from '../components/UnrealVersion'
 import YouTubeVideo from '../components/YouTubeVideo'
-import CommentList from '../components/CommentList'
+import CommentNotice from '../components/CommentNotice'
 import AuthorCard from '../components/AuthorCard'
 import Footer from '../components/Footer'
 import author from '../author/harrison.json'
@@ -66,7 +66,7 @@ const Template = ({ data }) => {
                       <h3>Author</h3>
                       <AuthorCard image={ author.image } name={ author.name } twitter={ author.twitter } email={ author.email } />
 
-                      <CommentList video={ post.frontmatter.video } />
+                      <CommentNotice video={ post.frontmatter.video }/>
 
                   </div>
 

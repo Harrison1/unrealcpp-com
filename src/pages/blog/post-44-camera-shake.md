@@ -3,7 +3,7 @@ templateKey: blog-post
 path: /camera-shake
 title: Camera Shake
 image: https://res.cloudinary.com/several-levels/image/upload/v1522321112/camera-shake_vlecnv.jpg
-video: sXNDeImnipU
+video: bkdXcjZZq7Y
 tags: ["beginner"]
 uev: 4.19.0
 date: 2018-03-31T12:00:00.226Z
