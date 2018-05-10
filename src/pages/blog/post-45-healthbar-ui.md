@@ -348,7 +348,7 @@ void AUnrealCPPCharacter::DamageTimer()
 }
 ```
 
-The next two functions will deal with the Magic's timeline curve. The `SetMagicValue` function will run in conjunction with the timline changing the `Magic` and `MagicPercentage` values as the timeline progressess. The `SetMagicState` function is called after the timeline finishes, this will revert the desired values and gun material back to their respective default values.
+The next two functions will deal with the Magic's timeline curve. The `SetMagicValue` function will run in conjunction with the timeline changing the `Magic` and `MagicPercentage` values as the timeline progresses. The `SetMagicState` function is called after the timeline finishes, this will revert the desired values and gun material back to their respective default values.
 
 #### magic functions
 ```cpp
@@ -389,7 +389,7 @@ The `PlayFlash` function simply returns a bool that lets our UI know if it shoul
 }
 ```
 
-The next two functions will affect the player's health. The `ReceivePointDamage` funciton will run each time the player interacters with an element that calls the `ApplyPointDamage` function. In our example we'll create a fire actor later on that will run `ApplyPointDamage`. In our `ReceivePointDamage` function we are simply toggling our `bCanBeDamaged` bool to trigger our invincibility, toggleing our `redFlash` bool to trigger the animation, running the `UpdateHealth` function with the `Damage` value passed through as a parameter, and then calling `DamageTimer` to revert the `bCanBeDamaged` bool back to `true`. The `UpdateHealth` function immedietly changes and clamps the `Health` value then it sets `PreviousHealth` and `HealthPercentage`.
+The next two functions will affect the player's health. The `ReceivePointDamage` function will run each time the player interacts with an element that calls the `ApplyPointDamage` function. In our example we'll create a fire actor later on that will run `ApplyPointDamage`. In our `ReceivePointDamage` function we are simply toggling our `bCanBeDamaged` bool to trigger our invincibility, toggling our `redFlash` bool to trigger the animation, running the `UpdateHealth` function with the `Damage` value passed through as a parameter, and then calling `DamageTimer` to revert the `bCanBeDamaged` bool back to `true`. The `UpdateHealth` function immediately changes and clamps the `Health` value then it sets `PreviousHealth` and `HealthPercentage`.
 
 #### ReceiveDamage and UpdateHealth
 ```cpp
@@ -410,7 +410,7 @@ void AUnrealCPPCharacter::UpdateHealth(float HealthChange)
 }
 ```
 
-The final two functions are magic related and are similar to the health functions. `UpdateMagic` sets the `Magic` values and starts the timeline to get the player's magic meter back to 100%. `UpdateMagic` will run after 5 seconds of no magic firing to fill up the player's magic bar. `SetMagicChange` will toggle `bCanUseMagic` bool, set `PreviousMagic`, set `MagicValue`, change the gun's material to indicate overehating, the call `PlayFromStart` on the magic float timeline curve.
+The final two functions are magic related and are similar to the health functions. `UpdateMagic` sets the `Magic` values and starts the timeline to get the player's magic meter back to 100%. `UpdateMagic` will run after 5 seconds of no magic firing to fill up the player's magic bar. `SetMagicChange` will toggle `bCanUseMagic` bool, set `PreviousMagic`, set `MagicValue`, change the gun's material to indicate overheating, the call `PlayFromStart` on the magic float timeline curve.
 
 #### UpdateMagic and SetMagicChange
 ```cpp
@@ -488,7 +488,7 @@ private:
 };
 ```
 
-Next, in the `GameMode` `.cpp` file we first find the plaery in the `BeginPlay` function then in the `Tick` function we always check if the player's health is above 0. If the player's health is below 0 we will simply restart the level.
+Next, in the `GameMode` `.cpp` file we first find the player in the `BeginPlay` function then in the `Tick` function we always check if the player's health is above 0. If the player's health is below 0 we will simply restart the level.
 
 #### UnrealCPPGameMode.cpp
 ```cpp
@@ -575,7 +575,7 @@ void AUnrealCPPGameMode::HandleNewState(EGamePlayState NewState)
 We're done with the `GameMode` files.
 
 Next, we'll create our `CampFire` actor that will actually apply damage to the player. Create a new `C++` actor class and call it **CampFire**. In `CampFire.h` we will add our properties and functions that we will be using throughout the `.cpp`
-file. Some things in the `.h` file include the overlap functions, a particle compenent that will be set to our fire partilce later on in the tutorial, properties necessary for tha `ApplyPointDamage` function. Below is the final `CampFire.h` file.
+file. Some things in the `.h` file include the overlap functions, a particle component that will be set to our fire particle later on in the tutorial, properties necessary for the `ApplyPointDamage` function. Below is the final `CampFire.h` file.
 
 #### CampFile.h
 ```cpp
@@ -630,7 +630,7 @@ public:
 };
 ```
 
-Next, we'll move into the `CampFire.cpp` file. Include both `Kismet/GameplayStatics.h` and `TimerManager.h`. In `constructor` function we'll setup our `BoxComponent`, `ParticleComponent`, and connect the overlap functions to the `BoxComponent`. Next, we'll create the `OnOverlapBegin` function, if the conditions pass as `true`, we'll set the necessary parameters to and then trigger our the fire timer to run and loop the `ApplyFireDamage` function after **2.2s**. The reason why the timer is set to 2.2 seconds is because our player has invincibily that lasts 2 seconds so we want the `ApplyFireDamage` function to run right after the invicibiliy is turned off, so the extra 0.2 seconds is a buffer to prevent conflicts. `OnOverlapEnd` is where we clear the timer and set `bCanApplyDamage` indicating the fire cannot apply damage to the player. The `ApplyFireDamage` function first checks if `bCanApplyDamage` and then runs `ApplyPointDamage` with `MyCharcter` as the actor to apply damage and the fire will deal **200.0f** points of damage. `ApplyPointDamage` is a function inherited from **GameplayStatics**. Below is the final `CampFire.cpp` file.
+Next, we'll move into the `CampFire.cpp` file. Include both `Kismet/GameplayStatics.h` and `TimerManager.h`. In `constructor` function we'll setup our `BoxComponent`, `ParticleComponent`, and connect the overlap functions to the `BoxComponent`. Next, we'll create the `OnOverlapBegin` function, if the conditions pass as `true`, we'll set the necessary parameters to and then trigger our the fire timer to run and loop the `ApplyFireDamage` function after **2.2s**. The reason why the timer is set to 2.2 seconds is because our player has invincibility that lasts 2 seconds so we want the `ApplyFireDamage` function to run right after the invincibility is turned off, so the extra 0.2 seconds is a buffer to prevent conflicts. `OnOverlapEnd` is where we clear the timer and set `bCanApplyDamage` indicating the fire cannot apply damage to the player. The `ApplyFireDamage` function first checks if `bCanApplyDamage` and then runs `ApplyPointDamage` with `MyCharcter` as the actor to apply damage and the fire will deal **200.0f** points of damage. `ApplyPointDamage` is a function inherited from **GameplayStatics**. Below is the final `CampFire.cpp` file.
 
 #### CampFire.cpp
 ```cpp
@@ -712,7 +712,7 @@ public:
 };
 ```
 
-Next, inside the `MedKit.cpp`, in the constructor function we'll setup the `OnOverlap` delegate. Every actor has an `OnOverlap` delegate. Next, create the `OnOverlap` function. In the `OnOverlap` funciton we check if the the overlaped actor is inherets from our character class (is the actor our player), then we check if the player's health less than 100%, then we run the character's function `UpdateHealth` with specified amount, in this exmaple I added in `100.0f` point of health, then we destroy the actor. Earlier in the tutorial, I set the character's `FullHealth` variable to `1000.0f`, so `100.0f` is 10% of the player's health. Below is the final `MedKit.cpp`. You'll notice in the below code that I omit the `BeginPlay` and `Tick` functions because they are not needed in this actor.
+Next, inside the `MedKit.cpp`, in the constructor function we'll setup the `OnOverlap` delegate. Every actor has an `OnOverlap` delegate. Next, create the `OnOverlap` function. In the `OnOverlap` function we check if the the overlapped actor is inherits from our character class (is the actor our player), then we check if the player's health less than 100%, then we run the character's function `UpdateHealth` with specified amount, in this example I added in `100.0f` point of health, then we destroy the actor. Earlier in the tutorial, I set the character's `FullHealth` variable to `1000.0f`, so `100.0f` is 10% of the player's health. Below is the final `MedKit.cpp`. You'll notice in the below code that I omit the `BeginPlay` and `Tick` functions because they are not needed in this actor.
 
 #### MedKit.cpp
 ```cpp
@@ -776,7 +776,7 @@ private:
 };
 ```
 
-Next, inside the 	`HUD`'s `.cpp` file, in the `BeginPlay` function we'll set our `CurrentWidget` property and if we're successful in creating the widget we'll run `AddToViewport`. Below is the final `HUD` `.cpp` file.
+Next, inside the `HUD`'s `.cpp` file, in the `BeginPlay` function we'll set our `CurrentWidget` property and if we're successful in creating the widget we'll run `AddToViewport`. Below is the final `HUD` `.cpp` file.
 
 #### UnrealCPPHUD.cpp
 ```cpp
