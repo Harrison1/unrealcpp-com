@@ -4,7 +4,7 @@ path: /open-door-with-timeline
 title: Open Door With Timeline and Curve Float
 image: https://res.cloudinary.com/several-levels/image/upload/v1518885855/open-door-with-timeline_z3ha4z.jpg
 video: KsvUYzrTwBw
-tags: ["intermediate", "door"]
+tags: ["intermediate"]
 uev: 4.18.3
 date: 2018-02-20T12:00:00.226Z
 description: In this tutorial we'll learn how to open a door using a timeline and a curve float.

@@ -4,7 +4,7 @@ import keys from '../apikeys/keys.json'
 
 const CommentNotice = ({video}) => 
     <div>
-        <p><a href={`https://www.youtube.com/watch?v=${video}`} className="youtube-link">Please leave any comments or feedback on the YouTube page</a></p>
+        <a href={`https://www.youtube.com/watch?v=${video}`} className="ytl-hov"><p className="youtube-link">Please leave any comments or feedback on the YouTube page</p></a>
     </div>
 
 export default CommentNotice

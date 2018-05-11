@@ -4,7 +4,7 @@ path: /open-door-with-lerp
 title: Open Door With Lerp and Overlap
 image: https://res.cloudinary.com/several-levels/image/upload/v1518171209/open-door-with-lerp_wl3xyn.jpg
 video: 15k_QiMYyas
-tags: ["intermediate", "door"]
+tags: ["intermediate"]
 uev: 4.18.3
 date: 2018-02-10T12:00:00.226Z
 description: In this tutorial we'll learn how to open a door using the lerp function and overlap events.
