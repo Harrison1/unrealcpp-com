@@ -925,6 +925,9 @@ In the Player character set the materials to two materials you want to use to sw
 ### Set Gun Materials
 [![Event Graph Animation BP](https://res.cloudinary.com/several-levels/image/upload/v1526027061/set-gun-materials_ojv5jx.png "Event Graph Animation BP")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/set-gun-materials_ojv5jx.png)
 
+### Simple BP for Making a Glowing Red Material
+[![Glowing Red BP](https://res.cloudinary.com/several-levels/image/upload/v1526135437/red-glow-material_jtrrjh.png "Glowing Red BP")](https://res.cloudinary.com/several-levels/image/upload/v1526135437/red-glow-material_jtrrjh.png)
+
 Everything should be set. Compile the code and you should have working UI. Below is the final code.
 
 ### CampFire.h
