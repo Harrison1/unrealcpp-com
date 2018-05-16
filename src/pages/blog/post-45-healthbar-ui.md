@@ -3,10 +3,10 @@ templateKey: blog-post
 path: /health-bar-ui-hud
 title: Health Bar and UI HUD
 image: https://res.cloudinary.com/several-levels/image/upload/v1526032191/health-bar-ui_ypjozf.jpg
-video: bkdXcjZZq7Y
+video: Nt4W1B8cKy8
 tags: ["Advanced"]
 uev: 4.19.2
-date: 2018-05-12T12:00:00.226Z
+date: 2018-05-16T12:00:00.226Z
 description: In this tutorial we'll learn how to create a health bar while applying damage.
 ---
 **Github Link: [https://github.com/Harrison1/unrealcpp/tree/master/HealthBar](https://github.com/Harrison1/unrealcpp/tree/master/HealthBar)**
