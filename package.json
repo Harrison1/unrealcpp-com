@@ -30,6 +30,7 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "prismjs": "^1.23.0",
     "react-helmet": "^6.1.0"
   }
 }
