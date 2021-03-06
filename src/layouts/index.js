@@ -1,16 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import '../css/prism-okaidia.css'
-import '../css/global.css'
-import '../css/screen.css'
 import appleIcon57 from '../favicons/apple-icon-57x57.png'
 import appleIcon60 from '../favicons/apple-icon-60x60.png'
 import appleIcon72 from '../favicons/apple-icon-72x72.png'
 import appleIcon76 from '../favicons/apple-icon-76x76.png'
 import appleIcon114 from '../favicons/apple-icon-114x114.png'
-import appleIcon120 from '../favicons/apple-icon-120x120.png'
-import appleIcon144 from '../favicons/apple-icon-144x144.png'
 import appleIcon152 from '../favicons/apple-icon-152x152.png'
 import appleIcon180 from '../favicons/apple-icon-180x180.png'
 import androidChrome192 from '../favicons/android-chrome-192x192.png'
@@ -23,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Unreal C++"
       meta={[
-        { name: 'description', content: 'A tutorial site dedicated to using C++ in Unreal Engine 4.  This site is meant for game developers wanting to learn how to begin using c++ in UE4.' },
+        { name: 'description', content: 'A tutorial site dedicated to using C++ in Unreal Engine 4. This site is meant for game developers wanting to learn how to begin using c++ in UE4.' },
         { name: 'keywords', content: 'unreal, engine, ue4, c++, cpp, game, development, harrison, mcguire' },
         { charSet: 'utf-8'},
         { name: 'theme-color', content: '#663399'}
@@ -46,12 +40,8 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
 
-    <div>{children()}</div>
+    <div>{ children }</div>
   </div>
 );
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func
-};
 
 export default TemplateWrapper;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 const HomeNav = ( { isHome } ) => 
     <nav className="site-nav">
@@ -14,11 +14,6 @@ const HomeNav = ( { isHome } ) =>
                     <Link to="/tags">
                         Tags
                     </Link>
-                </li>
-                <li role="menuitem">
-                    <a href="https://www.patreon.com/harrisonmcguire">
-                        Patreon
-                    </a>
                 </li>
             </ul>
         </div>

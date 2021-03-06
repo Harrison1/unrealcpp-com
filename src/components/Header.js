@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import HomeNav from './HomeNav'
 
 const Header = ({ image, title, tagline }) => 

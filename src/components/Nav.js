@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
-const Nav = ( { isHome } ) => 
+const Nav = () => 
     <nav className="site-nav">
         <div className="site-nav-left">
             <a className="site-nav-logo" href="/">Unreal C++</a>
@@ -15,11 +15,6 @@ const Nav = ( { isHome } ) =>
                     <Link to="/tags">
                         Tags
                     </Link>
-                </li>
-                <li role="menuitem">
-                    <a href="https://www.patreon.com/harrisonmcguire">
-                        Patreon
-                    </a>
                 </li>
             </ul>
         </div>

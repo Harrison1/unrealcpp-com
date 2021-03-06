@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 import Navbar from '../components/Navbar'
 import Tag from '../components/Tag'
 import UnrealVersion from '../components/UnrealVersion'
@@ -10,93 +10,85 @@ import AuthorCard from '../components/AuthorCard'
 import Footer from '../components/Footer'
 import author from '../author/harrison.json'
 
-const Template = ({ data }) => {
-
-  const { markdownRemark: post } = data
-  let tags = ''
-
-  if(Array.isArray(post.frontmatter.tags)) {
-    
-    tags = post.frontmatter.tags.map((n, i) => {
-        return <Tag key={ i } tag= { n } />
-    })
-
-  } else {
-    tags = <div></div>
-  }
-
+const BlogPostTemplate = ({ data }) => {
+  const post = data.markdownRemark
 
   return (
     <div>
-
       <Navbar />
-
       <Helmet title={`Unreal C++ | ${post.frontmatter.title}`} />
-
       <div className="blog-post-header" style={{ backgroundImage: `url(${ post.frontmatter.image })` }}>
-
-      { tags }
-
+        { post.frontmatter.tags.map((n, i) => <Tag key={ i } tag= { n } />) }
       </div>
-      
       <main id="site-main" className="site-main outer bg-white" role="main">
-
-          <div className="inner">
-
-              <article className="post-full">
-
-                  <div className="blog-content">
-
-                      <h1 className="post-full-title">{ post.frontmatter.title }</h1>
-
-                      <div className="date-meta">
-
-                        <p>{ post.frontmatter.date }</p>
-
-                        <UnrealVersion version={ post.frontmatter.uev } />
-
-                      </div>
-
-                      <YouTubeVideo id={ post.frontmatter.video } />
-
-                      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-                      <hr />
-
-                      <h3>Author</h3>
-                      <AuthorCard image={ author.image } name={ author.name } twitter={ author.twitter } email={ author.email } website={ author.website } companysite={ author.companysite } youtube={author.youtube} />
-
-                      <CommentNotice video={ post.frontmatter.video }/>
-
-                  </div>
-
-              </article>
-
+        <div className="inner">
+          <article className="post-full">
+            <div className="blog-content">
+              <h1 className="post-full-title">{ post.frontmatter.title }</h1>
+                <div className="date-meta">
+                  <p>{ post.frontmatter.date }</p>
+                  <UnrealVersion version={ post.frontmatter.uev } />
+                </div>
+                <YouTubeVideo id={ post.frontmatter.video } />
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <hr />
+                <AuthorCard 
+                  image={ author.image } 
+                  name={ author.name } 
+                  website={ author.website }
+                />
+                <CommentNotice video={ post.frontmatter.video }/>
+              </div>
+            </article>
           </div>
-
       </main>
-
       <Footer />
-
     </div>
   );
 }
 
-export default Template
+export default BlogPostTemplate
 
-export const blogPageQuery = graphql`
-query BlogPostByPath($path: String!) {
-  markdownRemark(frontmatter: { path: { eq: $path } }) {
-    html
-    frontmatter {
-      date(formatString: "MMMM DD, YYYY")
-      image
-      video
-      path
-      tags
-      title
-      uev
+export const pageQuery = graphql`
+  query BlogPostBySlug(
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    markdownRemark(id: { eq: $id }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        description
+        image
+        tags
+        video
+        uev
+      }
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
     }
   }
-}
-`;
+`
