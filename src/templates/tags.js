@@ -20,7 +20,6 @@ const Tags = ({ pageContext, data }) => {
           <div className="inner">
             <div className="site-header-content">
               <h1 className="site-title">
-                {/* {post.length} post{post.length === 1 ? "" : "s"} tagged with{" "} */}
                 <span style={{fontStyle: 'italic'}}>{ tagHeader }</span>
               </h1>
             </div>
@@ -28,7 +27,7 @@ const Tags = ({ pageContext, data }) => {
           </div>
         </header>
         <main id="site-main" className="site-main outer" role="main">
-            <div className="inner">
+          <div className="inner">
             <div className="post-feed">
               {edges.map(({ node }) => (
                   <BlogCard 
@@ -44,13 +43,11 @@ const Tags = ({ pageContext, data }) => {
                   />
               ))}
             </div>
-            </div>
+          </div>
         </main>
-
         <Footer />
-
-        </div>
-        </Layout>
+      </div>
+    </Layout>
   )
 }
 

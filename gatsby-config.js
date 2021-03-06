@@ -1,7 +1,6 @@
 const config = require("./data/SiteConfig");
 
 module.exports = {
-  pathPrefix: "/unrealcpp-com",
   siteMetadata: {
     title: config.siteTitle,
     siteUrl: config.siteUrl,
