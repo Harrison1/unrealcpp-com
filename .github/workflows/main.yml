@@ -5,13 +5,36 @@ on:
     branches:
       - master
 
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - uses: enriikke/gatsby-gh-pages-action@v2
+#         with:
+#           access-token: ${{ secrets.ACCESS_TOKEN }}
+#           deploy-branch: gh-pages
+#           gatsby-args: --prefix-paths
+
 jobs:
-  build:
+  build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Use Node.js '14.x'
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: Install and Build 🔧
+      run: |
+        npm install
+        npm run export
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        CLEAN: true
