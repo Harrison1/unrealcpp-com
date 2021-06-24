@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Debug Logging
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/console-log_zmjgfh.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/console-log_zmjgfh.jpg
 video: 7IDnpurja0w
 tags: ["beginner", "debug"]
 uev: 4.18.3

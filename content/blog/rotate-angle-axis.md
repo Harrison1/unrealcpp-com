@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Rotate Angle Axis
-image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-angle-axis_rkpyse.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/rotating-angle-axis_rkpyse.jpg
 video: ZoMoG0yhwg8
 tags: ["rotation", "location"]
 uev: 4.18.3

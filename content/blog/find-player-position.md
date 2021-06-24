@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Find Player Position
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/get-player-position_rd1bss.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/get-player-position_rd1bss.jpg
 video: SovEiHzHlqU
 tags: ["beginner", "location"]
 uev: 4.18.3

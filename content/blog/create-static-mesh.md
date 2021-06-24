@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Create Static Mesh
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/create-static-mesh_c8lsca.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/create-static-mesh_c8lsca.jpg
 video: R8AhsNo6-Nw
 tags: ["beginner"]
 uev: 4.18.3
@@ -82,6 +82,6 @@ Compile the code.
 Now inside the editor, drag and drop in your new actor. In the actor's Details Panels, select the static mesh you want to add to the actor.
 
 #### add static mesh
-[![add static mesh](https://res.cloudinary.com/several-levels/image/upload/v1511871984/add-static-mesh-screenshot_oodbx3.jpg "add static mesh")](https://res.cloudinary.com/several-levels/image/upload/v1511871984/add-static-mesh-screenshot_oodbx3.jpg)
+[![add static mesh](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-static-mesh-screenshot_oodbx3.jpg "add static mesh")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-static-mesh-screenshot_oodbx3.jpg)
 
 

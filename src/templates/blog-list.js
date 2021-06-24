@@ -18,7 +18,7 @@ const BlogIndex = ({ data, pageContext }) => {
     <Layout>
       <div className="home-template">
         <Header 
-          image='https://res.cloudinary.com/several-levels/image/upload/v1513954790/cover-photo_axvhnu.jpg' 
+          image='https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/cover-photo_axvhnu.jpg' 
           title="Unreal C++" 
           tagline="Unreal Engine 4 C++ Tutorials" 
         />

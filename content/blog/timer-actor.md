@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Timer Actor
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/timer_pmunrb.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/timer_pmunrb.jpg
 video: bNW5dcZwAb8
 tags: ["beginner", "timer"]
 uev: 4.18.3

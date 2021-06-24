@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Floating Actor
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/floating-actor_mntqfm.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/floating-actor_mntqfm.jpg
 video: hv-F3BhP1dU
 tags: ["intermediate", "ue4 tutorial"]
 uev: 4.18.3

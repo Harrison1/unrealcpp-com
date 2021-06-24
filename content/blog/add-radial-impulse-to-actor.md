@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Add Radial Impulse to Actor
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/add-radial-force_ceu8dz.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-radial-force_ceu8dz.jpg
 video: ifhJXUJ1E2s
 tags: ["intermediate", "impulse", "radial"]
 uev: 4.18.3

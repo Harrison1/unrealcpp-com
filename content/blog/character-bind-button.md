@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Bind Button to Character
-image: https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/project-settings_twfimr.jpg
 video: TnUK3hPczoQ
 tags: ["beginner"]
 uev: 4.18.3
@@ -16,11 +16,11 @@ In this tutorial let's add an `Action` button to our character. First we will wa
 
 
 #### open Edit > Project Settings
-[![project settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg "Project Settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg)
+[![project settings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/project-settings_twfimr.jpg "Project Settings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/settings-input_bj3avm.jpg)
 
 
 #### go to the Input options and a button press
-[![input settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg "Input Settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg)
+[![input settings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/settings-input_bj3avm.jpg "Input Settings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/settings-input_bj3avm.jpg)
 
 In our Character.h file add the `OnAction` method under the `OnFire` method. My header file in this tutorial is called `UnrealCPPCharacter.h`, your file might be called something different.
 

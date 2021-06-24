@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Rotate Around Vector
-image: https://res.cloudinary.com/several-levels/image/upload/v1511657694/rotate-around-vector_sufcb7.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/rotate-around-vector_sufcb7.jpg
 video: eicFMa3kis4
 tags: ["rotation"]
 uev: 4.18.3

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Line Trace on Fire
-image: https://res.cloudinary.com/several-levels/image/upload/v1515966105/line-trace-on-fire_yn1anb.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/line-trace-on-fire_yn1anb.jpg
 video: xgt04-2rKV8
 tags: ["intermediate", "line trace"]
 uev: 4.18.3

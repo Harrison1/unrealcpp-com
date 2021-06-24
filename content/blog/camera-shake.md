@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Camera Shake
-image: https://res.cloudinary.com/several-levels/image/upload/v1522321112/camera-shake_vlecnv.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/camera-shake_vlecnv.jpg
 video: bkdXcjZZq7Y
 tags: ["beginner"]
 uev: 4.19.0
@@ -17,7 +17,7 @@ In this Unreal Engine 4 C++ tutorial we'll learn how to shake the camera every t
 First start by creating a new **Camera Shake** class and name it `MyCameraShake`. You'll have to click **Show all classes** to select the `CameraShake` class. 
 
 ### Add Camera Shake 
-[![add camaera shake](https://res.cloudinary.com/several-levels/image/upload/v1522321112/show-all-classes-camera-shake_df9oud.jpg "add camera shake")](https://res.cloudinary.com/several-levels/image/upload/v1522321112/show-all-classes-camera-shake_df9oud.jpg)
+[![add camaera shake](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/show-all-classes-camera-shake_df9oud.jpg "add camera shake")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/show-all-classes-camera-shake_df9oud.jpg)
 
 Next, go into the `.h` file and add the constructor function so we can use in the `.cpp` file.
 
@@ -84,7 +84,7 @@ void AUnrealCPPCharacter::OnFire()
 Now go back into the editor and compile the code. Find your character and in the details panel add the new `MyCameraShake` class to the `MyShake` variable.
 
 ### Add Shake Class to Character
-[![add shake class to character](https://res.cloudinary.com/several-levels/image/upload/v1522321112/add-camera-shake-to-character_bf7klq.jpg "add shake class to character")](https://res.cloudinary.com/several-levels/image/upload/v1522321112/add-camera-shake-to-character_bf7klq.jpg)
+[![add shake class to character](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-camera-shake-to-character_bf7klq.jpg "add shake class to character")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-camera-shake-to-character_bf7klq.jpg)
 
 Push play and now every time the gun fires, the camera will shake. You might have to restart your editor for the character class to function properly.
 

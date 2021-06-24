@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Add Mesh From File
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222942/add-mesh-from-file_qwbthi.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-mesh-from-file_qwbthi.jpg
 video: ZEmFrlL_1t4
 tags: ["beginner"]
 uev: 4.18.3

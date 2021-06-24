@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Pickup, Rotate, and Throw Object Like Gone Home
-image: https://res.cloudinary.com/several-levels/image/upload/v1520943148/pikcup-rotate-actor_lebmpn.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pikcup-rotate-actor_lebmpn.jpg
 video: sXNDeImnipU
 tags: ["intermediate"]
 uev: 4.19.0
@@ -17,7 +17,7 @@ In this Unreal Engine 4 C++ tutorial we'll learn how to pickup and inspect an ob
 The first thing we'll do is setup our **Input Actions**. Go to Edit > Project Settings > Input. Under Action Mappings add an Action and title it **Action**. Bind the new action to whatever buttons you want, for this tutorial I will be binding the **Action** button to the `E` key and the `Gamepad Face Button Left`. Next, add a new Action and title it **Inspect**. Bind the **Inspect** action to the `Left Shift` key, the `Right Mouse Button`, and the `Gamepad Right Trigger`.
 
 ### Action Bindings
-[![action bindings](https://res.cloudinary.com/several-levels/image/upload/v1521112199/action-mappings-inspect_ohwadj.jpg "action bindings")](https://res.cloudinary.com/several-levels/image/upload/v1521112199/action-mappings-inspect_ohwadj.jpg)
+[![action bindings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/action-mappings-inspect_ohwadj.jpg "action bindings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/action-mappings-inspect_ohwadj.jpg)
 
 Next, create a new **actor** class and call it whatever you want, in this tutorial I will call it `PickupAndRotateActor`.
 
@@ -446,7 +446,7 @@ void AUnrealCPPCharacter::ToggleItemPickup()
 Now, move back into the editor. Compile the code. Drag and drop the new `pickup` class into the editor. Add a mesh to the class. I personally adjusted the collision presets. I changed to collision to `Custom`, set everything to `block`, but to `ignore` **Pawn**, **Vehicle**, and **Projectile**. Click **Play** and you should have a working pickup item.
 
 #### Collision presets
-[![collision presets](https://res.cloudinary.com/several-levels/image/upload/v1521459535/pickup-rotate-collision-set_qlwaky.jpg "collision presets")](https://res.cloudinary.com/several-levels/image/upload/v1521459535/pickup-rotate-collision-set_qlwaky.jpg)
+[![collision presets](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pickup-rotate-collision-set_qlwaky.jpg "collision presets")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pickup-rotate-collision-set_qlwaky.jpg)
 
 Below is the final Code.
 

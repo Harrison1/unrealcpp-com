@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Light Switch on Button Press
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-button_cvzh0l.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/light-switch-button_cvzh0l.jpg
 video: Ypc_LdTXr1Q
 tags: ["intermediate"]
 uev: 4.18.3
@@ -115,11 +115,11 @@ Next, let's add an `Action` input to our project. In this case we are going to b
 
 
 #### open Edit > Project Settings
-[![project settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg "Project Settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg)
+[![project settings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/project-settings_twfimr.jpg "Project Settings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/settings-input_bj3avm.jpg)
 
 
 #### go to the Input options and a button press
-[![input settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg "Input Settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/settings-input_bj3avm.jpg)
+[![input settings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/settings-input_bj3avm.jpg "Input Settings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/settings-input_bj3avm.jpg)
 
 In our Character.h file add the `OnAction` method under the `OnFire` method. My header file in this tutorial is called `UnrealCPPCharacter.h`, your file might be called something different.
 

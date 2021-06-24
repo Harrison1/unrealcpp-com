@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Light Switch Overlap Trigger
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/light-switch-overlap_tkekfo.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/light-switch-overlap_tkekfo.jpg
 video: LACvuJgQU5c
 tags: ["beginner", "light", "ue4 tutorial"]
 uev: 4.18.3

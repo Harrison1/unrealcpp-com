@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Colliding Pawn UE4 Tutorial
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222397/colliding-pawn_m6rgd5.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/colliding-pawn_m6rgd5.jpg
 video: MFZ51eHFB_A
 tags: ["intermediate", "ue4 tutorial"]
 uev: 4.18.3
@@ -17,14 +17,14 @@ This is a tutorial going over how to do the Components and Collision tutorial pr
 Create a new `C++` class that inherits from the parent class of `UPawnMovementComponent` and call it `CollidingPawnMovementComponent`. We will use this component in the pawn we create later.
 
 #### new cpp movement comp class
-[![new c++ movement comp class](https://res.cloudinary.com/several-levels/image/upload/v1511787005/new-pawn-class_dgifxq.jpg "new c++ movement comp class")](https://res.cloudinary.com/several-levels/image/upload/v1511787005/new-pawn-class_dgifxq.jpg.jpg)
+[![new c++ movement comp class](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/new-pawn-class_dgifxq.jpg "new c++ movement comp class")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/new-pawn-class_dgifxq.jpg.jpg)
 
 #### new pawn movement comp
-[![new pawn movement comp](https://res.cloudinary.com/several-levels/image/upload/v1511788356/pawn-movement-comp_u6zzmz.jpg "new pawn movement comp")](https://res.cloudinary.com/several-levels/image/upload/v1511788356/pawn-movement-comp_u6zzmz.jpg)
+[![new pawn movement comp](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-movement-comp_u6zzmz.jpg "new pawn movement comp")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-movement-comp_u6zzmz.jpg)
 
 
 #### save new movement comp
-[![save new movement comp](https://res.cloudinary.com/several-levels/image/upload/v1511788356/save-pawn-movement-comp_ukuxtv.jpg "save new movement comp")](https://res.cloudinary.com/several-levels/image/upload/v1511788356/save-pawn-movement-comp_ukuxtv.jpg)
+[![save new movement comp](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/save-pawn-movement-comp_ukuxtv.jpg "save new movement comp")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/save-pawn-movement-comp_ukuxtv.jpg)
 
 The header file should like the code below.
 
@@ -115,13 +115,13 @@ void UCollidingPawnMovementComponent::TickComponent(float DeltaTime, enum ELevel
 Now, moving on, Create a new `C++` class that inherits from the parent `Pawn` class and call it `CollidingPawn`.
 
 #### new cpp class
-[![new c++ class](https://res.cloudinary.com/several-levels/image/upload/v1511787005/new-pawn-class_dgifxq.jpg "new c++ class")](https://res.cloudinary.com/several-levels/image/upload/v1511787005/new-pawn-class_dgifxq.jpg.jpg)
+[![new c++ class](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/new-pawn-class_dgifxq.jpg "new c++ class")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/new-pawn-class_dgifxq.jpg.jpg)
 
 #### new pawn
-[![parent pawn class](https://res.cloudinary.com/several-levels/image/upload/v1511787005/parent-pawn_sncmyb.jpg "parent pawn class")](https://res.cloudinary.com/several-levels/image/upload/v1511787005/parent-pawn_sncmyb.jpg)
+[![parent pawn class](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/parent-pawn_sncmyb.jpg "parent pawn class")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/parent-pawn_sncmyb.jpg)
 
 #### save it
-[![save CollidingPawn](https://res.cloudinary.com/several-levels/image/upload/v1511787005/save-colliding-pawn_g5ktxl.jpg "save CollidingPawn")](https://res.cloudinary.com/several-levels/image/upload/v1511787005/save-colliding-pawn_g5ktxl.jpg)
+[![save CollidingPawn](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/save-colliding-pawn_g5ktxl.jpg "save CollidingPawn")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/save-colliding-pawn_g5ktxl.jpg)
 
 In the header file we want to declare the variable we going to be using in the `.cpp` file. We will declare our movement functions along with our particle system and newly created `UCollidingPawnMovementComponent`.
 
@@ -398,10 +398,10 @@ After setting up our pawn with all the necessary components let's go ahead and b
     Mouse X: *Scale* 1.0  
 
 #### enter project settings
-[![go into project settings](https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg "go into project settings")](https://res.cloudinary.com/several-levels/image/upload/v1511728487/project-settings_twfimr.jpg)
+[![go into project settings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/project-settings_twfimr.jpg "go into project settings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/project-settings_twfimr.jpg)
 
 #### add action and axis inputs
-[![action and axis inputs](https://res.cloudinary.com/several-levels/image/upload/v1511869303/pawn-input-settings_o5ubnc.jpg "action and axis inputs")](https://res.cloudinary.com/several-levels/image/upload/v1511869303/pawn-input-settings_o5ubnc.jpg)
+[![action and axis inputs](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-input-settings_o5ubnc.jpg "action and axis inputs")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-input-settings_o5ubnc.jpg)
 
 
 Let's go ahead and bind the input to our pawn in the `SetupPlayerInputComponent` function. Our inputs will be bound to functions defined later in the code.

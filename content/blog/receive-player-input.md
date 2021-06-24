@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Receive Player Input
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/moving-pawn_vstq9s.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/moving-pawn_vstq9s.jpg
 video: vQsOIGWRdXQ
 tags: ["intermediate", "input"]
 uev: 4.18.3
@@ -64,10 +64,10 @@ In editor let's create an `Action` mapping called **Grow** and bind it to the `G
 // TODO get images and scales
 
 #### project settings
-[![project settings](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-project-settings_scb9ke.jpg "project settings")](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-project-settings_scb9ke.jpg)
+[![project settings](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-project-settings_scb9ke.jpg "project settings")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-project-settings_scb9ke.jpg)
 
 #### add inputs
-[![new pawn movement comp](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-movement-input_uejdk8.png "new pawn movement comp")](https://res.cloudinary.com/several-levels/image/upload/v1512036314/pawn-movement-input_uejdk8.png)
+[![new pawn movement comp](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-movement-input_uejdk8.png "new pawn movement comp")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/pawn-movement-input_uejdk8.png)
 
 1. `MoveX`   
     I: *Scale* 1.0  

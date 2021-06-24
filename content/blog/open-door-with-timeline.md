@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Open Door With Timeline and Curve Float
-image: https://res.cloudinary.com/several-levels/image/upload/v1518885855/open-door-with-timeline_z3ha4z.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/open-door-with-timeline_z3ha4z.jpg
 video: KsvUYzrTwBw
 tags: ["intermediate"]
 uev: 4.18.3
@@ -21,7 +21,7 @@ Next, in your content folder, right click, go to Miscellaneous > Curve and creat
 Next, in your content folder, right click, go to User Interface and select **Widget Blueprint**. Inside the **Widget Blueprint** drag and drop an image property into the viewport. For the source you can add the image below or any image you want. At the top of the details panel for the image name the property `helpimage`.
 
 #### feel free to use this image you want
-[![press e to open](https://res.cloudinary.com/several-levels/image/upload/v1518787568/press-e-to-use_vcn3pq.png "press e to open")](https://res.cloudinary.com/several-levels/image/upload/v1518787568/press-e-to-use_vcn3pq.png)  
+[![press e to open](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/press-e-to-use_vcn3pq.png "press e to open")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/press-e-to-use_vcn3pq.png)  
 
 
 Before we create a new actor, let's add to out build file so we can use `UMG` widgets. In your `Build.cs` file add `UMG`, `Slate`, and `SlateCore`;

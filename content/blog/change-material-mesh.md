@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Change Material Mesh
-image: https://res.cloudinary.com/several-levels/image/upload/v1516194505/change-material-mesh_jko1xl.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/change-material-mesh_jko1xl.jpg
 video: YDbN-3M1v9g
 tags: ["beginner", "material"]
 uev: 4.18.3

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Unreal Engine 4 Camera Director Tutorial
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222941/camera-director_bzw1mk.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/camera-director_bzw1mk.jpg
 video: wB3eBrf2xo8
 tags: ["intermediate", "ue4 tutorial"]
 uev: 4.18.3

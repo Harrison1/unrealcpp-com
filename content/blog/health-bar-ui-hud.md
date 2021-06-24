@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Health Bar and UI HUD
-image: https://res.cloudinary.com/several-levels/image/upload/v1526032191/health-bar-ui_ypjozf.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui_ypjozf.jpg
 video: Nt4W1B8cKy8
 tags: ["advanced"]
 uev: 4.19.2
@@ -836,96 +836,96 @@ void AUnrealCPPHUD::BeginPlay()
 Inside the UE4 editor we have to create a Float Curve Timeline. The timeline will be used for smooth transitions for the magic meter. In your content folder, right click, go to Miscellaneous > Curve and create new Curve Float. Open the curve float and create a new key by right clicking and selecting new key. In the top left set the values of the first key to have the values of 0 for Time and Value. Create a second key and set its Time value to 2.0 and its Value property to 1.0. Hold SHIFT, select both keys and then click Auto in the top bar to give the curve a smooth beginning and end.
 
 ### Magic Float Curve
-[![magic float curve](https://res.cloudinary.com/several-levels/image/upload/v1526027060/float-curve-two-seconds_qyux5a.png "magic float curve")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/float-curve-two-seconds_qyux5a.png)
+[![magic float curve](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/float-curve-two-seconds_qyux5a.png "magic float curve")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/float-curve-two-seconds_qyux5a.png)
 
 Next, in your content folder, right click then > User Interface then > select Widget Blueprint. Inside the Widget Blueprint drag and drop an progress bar property into the viewport. Put it in the top left corner. We are going to mimic the Wither 3 health bar. Below are the images we will be using. There is a background image with black fill and a full health bar with a red fill. Drag both images into your content folder, then convert them to sprites. These two images can be placed in the progress bar's details panel where both images can be placed respectively. 
 
 ### Health Bar Empty
-[![health bar empty](https://res.cloudinary.com/several-levels/image/upload/v1526023393/health-bar-empty_za1pqd.png "health bar empty")](https://res.cloudinary.com/several-levels/image/upload/v1526023393/health-bar-empty_za1pqd.png)
+[![health bar empty](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-empty_za1pqd.png "health bar empty")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-empty_za1pqd.png)
 
 ### Health Bar Full
-[![health bar full](https://res.cloudinary.com/several-levels/image/upload/v1526023393/health-bar-full_uahmmd.png "health bar full")](https://res.cloudinary.com/several-levels/image/upload/v1526023393/health-bar-full_uahmmd.png)
+[![health bar full](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-full_uahmmd.png "health bar full")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-full_uahmmd.png)
 
 Also, provided is the Wither 3 symbol which can be placed to the left of the health bar, this is only for style and aesthetics.
 
 ### Witcher Symbol
-[![Witcher Symbol](https://res.cloudinary.com/several-levels/image/upload/v1526023393/witcher-symbol_x69wji.png "Witcher Symbol")](https://res.cloudinary.com/several-levels/image/upload/v1526023393/witcher-symbol_x69wji.png)
+[![Witcher Symbol](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/witcher-symbol_x69wji.png "Witcher Symbol")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/witcher-symbol_x69wji.png)
 
 ### Create Sprites
-[![Create Sprites](https://res.cloudinary.com/several-levels/image/upload/v1526027060/convert-to-sprite_vydmyq.png "Create Sprites")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/convert-to-sprite_vydmyq.png)
+[![Create Sprites](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/convert-to-sprite_vydmyq.png "Create Sprites")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/convert-to-sprite_vydmyq.png)
 
 ### Health Bar UI 1
-[![Health Bar UI 1](https://res.cloudinary.com/several-levels/image/upload/v1526027060/health-bar-ui-1_gbl7av.png "Health Bar UI 1")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/health-bar-ui-1_gbl7av.png)
+[![Health Bar UI 1](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-1_gbl7av.png "Health Bar UI 1")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-1_gbl7av.png)
 
 ### Health Bar UI 2
-[![Health Bar UI 2](https://res.cloudinary.com/several-levels/image/upload/v1526027060/health-bar-ui-2_hy4m31.png "Health Bar UI 2")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/health-bar-ui-2_hy4m31.png)
+[![Health Bar UI 2](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-2_hy4m31.png "Health Bar UI 2")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-2_hy4m31.png)
 
 ### Health Bar UI 3
-[![Health Bar UI 3](https://res.cloudinary.com/several-levels/image/upload/v1526027060/health-bar-ui-3_a114hj.png "Health Bar UI 3")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/health-bar-ui-3_a114hj.png)
+[![Health Bar UI 3](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-3_a114hj.png "Health Bar UI 3")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-3_a114hj.png)
 
 
 Drag and drop a text element next to the health bar. This will represent the health in percentage
 
 ### Health Bar UI 4
-[![Health Bar UI 4](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-4_beajld.png "Health Bar UI 4")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-4_beajld.png)
+[![Health Bar UI 4](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-4_beajld.png "Health Bar UI 4")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-4_beajld.png)
 
 ### Health Bar UI 5
-[![Health Bar UI 5](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-5_fq0v6z.png "Health Bar UI 5")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-5_fq0v6z.png)
+[![Health Bar UI 5](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-5_fq0v6z.png "Health Bar UI 5")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-5_fq0v6z.png)
 
 Drag in a second progress bar and put it above the health bar. Make it skinnier and design it as you wish. This will be the magic meter. Then drag in another text element and rest it next to the magic meter. This will represent the magic as numbers.
 
 ### Health Bar UI 6
-[![Health Bar UI 6](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-6_tihnin.png "Health Bar UI 6")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-6_tihnin.png)
+[![Health Bar UI 6](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-6_tihnin.png "Health Bar UI 6")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-6_tihnin.png)
 
 ### Health Bar UI 7
-[![Health Bar UI 7](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-7_tfzzhh.png "Health Bar UI 7")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-7_tfzzhh.png)
+[![Health Bar UI 7](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-7_tfzzhh.png "Health Bar UI 7")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-7_tfzzhh.png)
 
 In the content folder drag the red image provided image below into your content folder. Covert the image to a sprite. Drag an image element into your UserWidget. Set the image as the red image. Anchor the image to bee full screen. We are going to create a red flash animation. Use the animation tools below to create a 2 second animation that changes the alpha of the red image from 0 to 0.5 every half second. We will use this animation to indicate that the player is receiving damage.
 
 ### Red Image
-[![Red Image](https://res.cloudinary.com/several-levels/image/upload/v1526023393/red_wvyvum.png "Red Image")](https://res.cloudinary.com/several-levels/image/upload/v1526023393/red_wvyvum.png)
+[![Red Image](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/red_wvyvum.png "Red Image")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/red_wvyvum.png)
 
 ### Health Bar UI 8
-[![Health Bar UI 8](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-8_eq9tsp.png "Health Bar UI 8")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-8_eq9tsp.png)
+[![Health Bar UI 8](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-8_eq9tsp.png "Health Bar UI 8")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-8_eq9tsp.png)
 
 ### Health Bar UI 9
-[![Health Bar UI 9](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-9_lqp9eh.png "Health Bar UI 9")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/health-bar-ui-9_lqp9eh.png)
+[![Health Bar UI 9](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-9_lqp9eh.png "Health Bar UI 9")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/health-bar-ui-9_lqp9eh.png)
 
 For this next part we have to do some very quick work in blueprints to bind these UI elements to our C++ functions. Select the Health Bar UI element and under the **Progress** tab for percent attribute select **Bind**, then **Create Binding**. This will open the UI's bind function graph. In the event graph we will simply find the player, cast to the player and then run the function to return the desired value. Make the blueprint cast function pure by right clicking it and clicking **Convert to Pure Cast**. Follow this same process for text elements and the magic elements. Below are images of the blueprint functions for the four UI elements.
 
 ### Bind Health Bar Percentage
-[![Health Bar BP](https://res.cloudinary.com/several-levels/image/upload/v1526027060/bp-get-health_hhyouh.png "Health Bar BP")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/bp-get-health_hhyouh.png)
+[![Health Bar BP](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-health_hhyouh.png "Health Bar BP")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-health_hhyouh.png)
 
 ### Bind Health Bar Text
-[![Health Bar BP Text](https://res.cloudinary.com/several-levels/image/upload/v1526027059/bp-get-health-text_jqgqtf.png "Health Bar BP Text")](https://res.cloudinary.com/several-levels/image/upload/v1526027059/bp-get-health-text_jqgqtf.png)
+[![Health Bar BP Text](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-health-text_jqgqtf.png "Health Bar BP Text")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-health-text_jqgqtf.png)
 
 ### Bind Magic Bar Percentage
-[![Magic Bar BP](https://res.cloudinary.com/several-levels/image/upload/v1526027059/bp-get-magic_la1l93.png "Magic Bar BP")](https://res.cloudinary.com/several-levels/image/upload/v1526027059/bp-get-magic_la1l93.png)
+[![Magic Bar BP](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-magic_la1l93.png "Magic Bar BP")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-magic_la1l93.png)
 
 ### Bind Magic Bar Text
-[![Magic Bar BP Text](https://res.cloudinary.com/several-levels/image/upload/v1526027059/bp-get-magic-text_izzjwt.png "Magic Bar Text")](https://res.cloudinary.com/several-levels/image/upload/v1526027059/bp-get-magic-text_izzjwt.png)
+[![Magic Bar BP Text](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-magic-text_izzjwt.png "Magic Bar Text")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-magic-text_izzjwt.png)
 
 Next, we will bind the animation in the User Widget's Event Graph. We will use the `Tick` function to check if we need to run the animation. We'll use a simple to bool to determine if we need to play the animation. The animation created in the UI, I called it **Flash** will be a variable under the Animation variables section.
 
 ### Animation bind to Tick Function
-[![Event Graph Animation BP](https://res.cloudinary.com/several-levels/image/upload/v1526027060/bp-get-red-flash_ffyq9w.png "Event Graph Animation BP")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/bp-get-red-flash_ffyq9w.png)
+[![Event Graph Animation BP](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-red-flash_ffyq9w.png "Event Graph Animation BP")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/bp-get-red-flash_ffyq9w.png)
 
 Inside the editor, compile the code. Drag in the camp fire. Set the particle component to have the fire particle effect, set overlap events to true, then set collision presets name to Trigger. Then drag in the MedKit, add a mesh component, resize it if necessary, set overlap events to true, then set collision presets name to Trigger. 
 
 ### Generate Overlap Events
-[![Generate Overlap Events](https://res.cloudinary.com/several-levels/image/upload/v1526027060/generate-overlap-events_ex2vzh.png "Generate Overlap Events")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/generate-overlap-events_ex2vzh.png)
+[![Generate Overlap Events](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/generate-overlap-events_ex2vzh.png "Generate Overlap Events")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/generate-overlap-events_ex2vzh.png)
 
 ### Set Collision Presets
-[![Set Collision Presets](https://res.cloudinary.com/several-levels/image/upload/v1526027060/collision-presets_zisyqo.png "Set Collision Presets")](https://res.cloudinary.com/several-levels/image/upload/v1526027060/collision-presets_zisyqo.png)
+[![Set Collision Presets](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/collision-presets_zisyqo.png "Set Collision Presets")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/collision-presets_zisyqo.png)
 
 
 In the Player character set the materials to two materials you want to use to switch between.
 
 ### Set Gun Materials
-[![Event Graph Animation BP](https://res.cloudinary.com/several-levels/image/upload/v1526027061/set-gun-materials_ojv5jx.png "Event Graph Animation BP")](https://res.cloudinary.com/several-levels/image/upload/v1526027061/set-gun-materials_ojv5jx.png)
+[![Event Graph Animation BP](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/set-gun-materials_ojv5jx.png "Event Graph Animation BP")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/set-gun-materials_ojv5jx.png)
 
 ### Simple BP for Making a Glowing Red Material
-[![Glowing Red BP](https://res.cloudinary.com/several-levels/image/upload/v1526135437/red-glow-material_jtrrjh.png "Glowing Red BP")](https://res.cloudinary.com/several-levels/image/upload/v1526135437/red-glow-material_jtrrjh.png)
+[![Glowing Red BP](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/red-glow-material_jtrrjh.png "Glowing Red BP")](https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/red-glow-material_jtrrjh.png)
 
 Everything should be set. Compile the code and you should have working UI. Below is the final code.
 

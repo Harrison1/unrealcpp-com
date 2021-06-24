@@ -52,12 +52,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: config.googleAnalyticsID
-      }
-    },
-    {
       resolve: "gatsby-plugin-nprogress",
       options: {
         color: config.themeColor
@@ -130,45 +124,3 @@ module.exports = {
     }
   ]
 }
-
-
-// feeds: [
-//   {
-//     serialize(ctx) {
-//       const rssMetadata = ctx.query.site.siteMetadata.rssMetadata;
-//       return ctx.query.allMarkdownRemark.edges.map(edge => ({
-//         categories: edge.node.frontmatter.tags,
-//         date: edge.node.frontmatter.date,
-//         title: edge.node.frontmatter.title,
-//         description: edge.node.frontmatter.description,
-//         author: rssMetadata.author,
-//         url: rssMetadata.site_url + edge.node.frontmatter.path,
-//         guid: rssMetadata.site_url + edge.node.frontmatter.path,
-//         custom_elements: [{ "content:encoded": edge.node.html }]
-//       }));
-//     },
-//     query: `
-//     {
-//       allMarkdownRemark(
-//         limit: 1000,
-//         sort: { order: DESC, fields: [frontmatter___date] },
-//       ) {
-//         edges {
-//           node {
-//             excerpt(pruneLength: 200)
-//             html
-//             id
-//             frontmatter {
-//               path
-//               description
-//               title
-//               image
-//               date
-//               tags
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `,
-//     output: config.siteRss

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Get Number of Pawns
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222399/number-of-pawns_mmkrig.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/number-of-pawns_mmkrig.jpg
 video: FfsEpboXAxw
 tags: ["beginner"]
 uev: 4.18.3

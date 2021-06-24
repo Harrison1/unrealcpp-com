@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Trigger Volume With Specific Actor
-image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-box-specific-actor_jtm9pb.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/trigger-box-specific-actor_jtm9pb.jpg
 video: rvf6uOT5Abs
 tags: ["trigger"]
 uev: 4.18.3

@@ -13,7 +13,7 @@ const TagsPage = ({
 }) => (
 
 <div className="home-template">
-  <Header image='https://res.cloudinary.com/several-levels/image/upload/v1513954790/cover-photo_axvhnu.jpg' title="Tags" />
+  <Header image='https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/cover-photo_axvhnu.jpg' title="Tags" />
   <main id="site-main" className="site-main outer" role="main">
     <div className="inner">
       <div className="post-feed">

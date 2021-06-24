@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Destroy Actor on Overlap
-image: https://res.cloudinary.com/several-levels/image/upload/v1516194505/destory-on-overlap_b7f8b3.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/destory-on-overlap_b7f8b3.jpg
 video: W-vP-tCQcDY
 tags: ["beginner"]
 uev: 4.18.3

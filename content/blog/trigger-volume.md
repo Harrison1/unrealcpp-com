@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Trigger Volume
-image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/trigger-volume_uw7r5i.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/trigger-volume_uw7r5i.jpg
 video: Ck3OE_olUr0
 tags: ["trigger"]
 uev: 4.18.3

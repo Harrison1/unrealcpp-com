@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Open Swing Door
-image: https://res.cloudinary.com/several-levels/image/upload/v1516801153/swing-door_jh0rhn.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/swing-door_jh0rhn.jpg
 video: LfWpPjBMppg
 tags: ["intermediate"]
 uev: 4.18.3

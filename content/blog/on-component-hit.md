@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Register Component Hit
-image: https://res.cloudinary.com/several-levels/image/upload/v1511657694/on-hit-component_etggr8.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/on-hit-component_etggr8.jpg
 video: BkV7bVcc2EM
 tags: ["hit"]
 uev: 4.18.3

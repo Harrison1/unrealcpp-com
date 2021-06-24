@@ -16,7 +16,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <div className="home-template">
-        <header className="site-header outer" style={{backgroundImage: 'url(https://res.cloudinary.com/several-levels/image/upload/v1513954790/cover-photo_axvhnu.jpg)' }}>
+        <header className="site-header outer" style={{backgroundImage: 'url(https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/cover-photo_axvhnu.jpg)' }}>
           <div className="inner">
             <div className="site-header-content">
               <h1 className="site-title">

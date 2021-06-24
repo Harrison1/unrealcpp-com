@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Draw Debug Helpers
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222397/draw-debug-helpers_hiskxe.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/draw-debug-helpers_hiskxe.jpg
 video: XPzkCafs1rU
 tags: ["beginner", "debug"]
 uev: 4.18.3

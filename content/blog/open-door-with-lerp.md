@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Open Door With Lerp and Overlap
-image: https://res.cloudinary.com/several-levels/image/upload/v1518171209/open-door-with-lerp_wl3xyn.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/open-door-with-lerp_wl3xyn.jpg
 video: 15k_QiMYyas
 tags: ["intermediate"]
 uev: 4.18.3

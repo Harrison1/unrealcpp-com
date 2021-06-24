@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Line Trace on Tick
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222398/actor-line-trace-tick_pkkqkf.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/actor-line-trace-tick_pkkqkf.jpg
 video: D6G8_PU8ZFY
 tags: ["intermediate", "line trace"]
 uev: 4.18.3

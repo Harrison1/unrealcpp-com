@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Actor Line Trace
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222941/actor-line-trace_ntz948.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/actor-line-trace_ntz948.jpg
 video: Ii0rw9p6hbI
 tags: ["intermediate", "line trace"]
 uev: 4.18.3

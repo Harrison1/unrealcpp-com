@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Sweep Multi Line Trace
-image: https://res.cloudinary.com/several-levels/image/upload/v1512222399/sweep-actor_ht78xh.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/sweep-actor_ht78xh.jpg
 video: Gu5f3-hFFfY
 tags: ["sweep", "line trace"]
 uev: 4.18.3

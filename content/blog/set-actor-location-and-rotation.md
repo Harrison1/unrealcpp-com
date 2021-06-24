@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Set Actor Location and Rotation
-image: https://res.cloudinary.com/several-levels/image/upload/v1512124932/set-actor-location-rotation_exukw7.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/set-actor-location-rotation_exukw7.jpg
 video: g5EQOzkpWbc
 tags: ["location", "rotation"]
 uev: 4.18.3

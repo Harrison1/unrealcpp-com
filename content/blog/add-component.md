@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Add Component
-image: https://res.cloudinary.com/several-levels/image/upload/v1511648024/add-billboard-component_yhhmzf.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/add-billboard-component_yhhmzf.jpg
 video: iHOAZUHYVq0
 tags: ["beginner"]
 uev: 4.18.3

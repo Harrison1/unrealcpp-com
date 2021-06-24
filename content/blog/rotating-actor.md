@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Rotating Actor
-image: https://res.cloudinary.com/several-levels/image/upload/v1512221876/rotating-actor_kuncdl.jpg
+image: https://res.cloudinary.com/dz09rnbhe/image/upload/unrealcpp/rotating-actor_kuncdl.jpg
 video: ku61sRkcQHQ
 tags: ["rotation"]
 uev: 4.18.3
