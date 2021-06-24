@@ -38,12 +38,12 @@ const TemplateWrapper = ({ children }) => (
 
       <link rel='canonical' href='https://unrealcpp.com' />
 
-      <script async src='https://www.googletagmanager.com/gtag/js?id=G-PSL3Q0PR40'></script>
+      <script async src='https://www.googletagmanager.com/gtag/js?id=G-FNY55777ZG'></script>
     </Helmet>
     <Helmet
       script={[{ 
         type: 'text/javascript', 
-        innerHTML: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-PSL3Q0PR40');`
+        innerHTML: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FNY55777ZG');`
       }]}
     />
     <div>
