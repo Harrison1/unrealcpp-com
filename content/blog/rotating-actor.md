@@ -73,7 +73,7 @@ In the `Tick` function create a new `FRotator` variable titled `NewRotation` and
 
 #### Tick function
 ```cpp
-/ Called every frame
+// Called every frame
 void ARotatingActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
