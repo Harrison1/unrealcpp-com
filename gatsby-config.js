@@ -117,7 +117,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml"
+            output: "/rss.xml",
+            title: "Unreal C++ RSS Feed"
           },
         ],
       },

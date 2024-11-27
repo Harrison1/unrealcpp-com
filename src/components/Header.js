@@ -11,6 +11,7 @@ const Header = ({ image, title, tagline }) =>
                 <h2 className="site-description">
                     { tagline }
                 </h2>
+                <a className="gdtactics" href="https://gdtactics.com/">vist <strong>GD Tactics</strong> for the latest</a>
             </div>
             <HomeNav />
         </div>
